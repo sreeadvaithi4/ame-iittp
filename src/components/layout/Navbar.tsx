@@ -70,7 +70,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-1">
+          <div className="hidden md:flex items-center gap-1">
             {navigationItems.map((item) => (
               <div
                 key={item.name}
@@ -81,10 +81,10 @@ const Navbar = () => {
                 <Link
                   to={item.href}
                   className={cn(
-                    "flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-medium transition-colors",
+                    "flex items-center gap-1 px-3 lg:px-4 py-2 rounded-lg text-sm font-medium transition-colors",
                     isActive(item.href)
-                      ? "text-primary bg-primary/5"
-                      : "text-foreground hover:text-primary hover:bg-muted"
+                      ? "text-primary bg-primary/10"
+                      : "text-foreground hover:text-primary hover:bg-secondary"
                   )}
                 >
                   {item.name}
@@ -95,7 +95,7 @@ const Navbar = () => {
 
                 {/* Dropdown */}
                 {item.children && openDropdown === item.name && (
-                  <div className="absolute top-full left-0 pt-2 w-56 animate-fade-in">
+                  <div className="absolute top-full left-0 pt-2 w-56 animate-fade-in z-50">
                     <div className="bg-card rounded-lg shadow-xl border border-border overflow-hidden">
                       {item.children.map((child) => (
                         <Link
@@ -116,7 +116,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 rounded-lg hover:bg-muted transition-colors"
+            className="md:hidden p-2 rounded-lg hover:bg-secondary transition-colors"
           >
             {mobileMenuOpen ? (
               <X className="w-6 h-6" />
@@ -129,7 +129,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-16 md:top-20 bg-background border-b border-border animate-slide-in-right">
+        <div className="md:hidden fixed inset-x-0 top-16 bg-background border-b border-border animate-slide-in-right">
           <div className="container-section py-4 max-h-[calc(100vh-4rem)] overflow-y-auto">
             {navigationItems.map((item) => (
               <div key={item.name} className="py-2">
