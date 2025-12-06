@@ -14,10 +14,10 @@ const CategoryCard = ({ title, description, icon }: CategoryCardProps) => {
     <>
       <button
         onClick={() => setIsModalOpen(true)}
-        className="group w-full text-left bg-card border border-border rounded-xl p-6 card-hover focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+        className="group w-full text-left bg-ame-red-light border border-primary/20 rounded-xl p-6 card-hover focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background hover:border-primary/50 hover:bg-primary/15 transition-all duration-300"
       >
         {icon && (
-          <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+          <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
             {icon}
           </div>
         )}
@@ -25,7 +25,7 @@ const CategoryCard = ({ title, description, icon }: CategoryCardProps) => {
           {title}
         </h3>
         {description && (
-          <p className="body-text text-sm">{description}</p>
+          <p className="body-text text-sm text-muted-foreground">{description}</p>
         )}
       </button>
 
