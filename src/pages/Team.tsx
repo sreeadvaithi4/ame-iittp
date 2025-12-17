@@ -28,10 +28,13 @@ const facultyMembers = [
 ];
 
 const studentReps = [
-  { name: "Student Representative 1", role: "General Secretary" },
-  { name: "Student Representative 2", role: "Event Coordinator" },
-  { name: "Student Representative 3", role: "Technical Head" },
-  { name: "Student Representative 4", role: "Media & Outreach" },
+  { name: "Kambala Kiran Kumar", role: "President" },
+  { name: "Nandagovind J V", role: "Vice-President" },
+  { name: "Pramod Kumar M", role: "Secretary" },
+  { name: "Sree Advaithi", role: "Secretary" },
+  { name: "Prithivi Nandakumar", role: "Coordinator" },
+  { name: "Geddam Dhanumjay", role: "Coordinator" },
+  { name: "Dasari Pranavesh Reddy", role: "Coordinator" },
 ];
 
 const Team = () => {
@@ -78,22 +81,23 @@ const Team = () => {
             The student leaders driving AME's vision forward
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {studentReps.map((student, index) => (
-              <button
+              <div
                 key={student.name}
-                onClick={() => setSelectedStudent(student.name)}
-                className="group bg-card border border-border rounded-xl p-6 card-hover text-center focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 animate-fade-in-up"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="group bg-card border border-border rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 text-center animate-fade-in-up h-48 flex flex-col items-center justify-center"
+                style={{ animationDelay: `${index * 0.05}s` }}
               >
-                <div className="w-20 h-20 rounded-full bg-secondary flex items-center justify-center mb-4 mx-auto border-4 border-primary/20 group-hover:border-primary transition-colors">
-                  <User className="w-10 h-10 text-muted-foreground" />
+                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 border-2 border-primary/30 group-hover:border-primary group-hover:bg-primary/20 transition-all duration-300">
+                  <User className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="font-semibold text-foreground mb-1 group-hover:text-primary transition-colors">
+                <p className="text-xs font-medium text-primary uppercase tracking-wider mb-2">
+                  {student.role}
+                </p>
+                <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors text-sm">
                   {student.name}
                 </h3>
-                <p className="text-sm text-muted-foreground">{student.role}</p>
-              </button>
+              </div>
             ))}
           </div>
         </div>
