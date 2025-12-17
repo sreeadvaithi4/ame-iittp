@@ -4,6 +4,7 @@ import FacultyCard from "@/components/shared/FacultyCard";
 import { useState } from "react";
 import PlaceholderModal from "@/components/shared/PlaceholderModal";
 import { User } from "lucide-react";
+import abirDuttaImage from "@/assets/faculty/abir-dutta.png";
 
 const facultyMembers = [
   {
@@ -15,6 +16,7 @@ const facultyMembers = [
     name: "Dr. Abir Dutta",
     designation: "Faculty Member, Department of Mechanical Engineering, IIT Tirupati",
     quote: "The association bridges the gap between theoretical knowledge and practical applications.",
+    image: abirDuttaImage,
   },
   {
     name: "Dr. Mohd Furquan",
