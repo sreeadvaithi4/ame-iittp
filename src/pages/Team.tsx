@@ -54,11 +54,11 @@ const Team = () => {
             Our dedicated faculty mentors who guide and support AME initiatives
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto items-stretch">
             {facultyMembers.map((faculty, index) => (
               <div
                 key={faculty.name}
-                className="animate-fade-in-up"
+                className="animate-fade-in-up h-full"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <FacultyCard {...faculty} />

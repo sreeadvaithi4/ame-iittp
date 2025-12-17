@@ -16,11 +16,11 @@ const FacultyCard = ({ name, designation, quote, image }: FacultyCardProps) => {
     <>
       <button
         onClick={() => setIsModalOpen(true)}
-        className="group w-full text-left bg-card border border-border rounded-xl p-6 card-hover focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+        className="group w-full h-full text-left bg-card border border-border rounded-xl p-6 card-hover focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
       >
-        <div className="flex flex-col items-center text-center">
+        <div className="flex flex-col items-center text-center h-full">
           {/* Avatar */}
-          <div className="w-24 h-24 rounded-full bg-secondary flex items-center justify-center mb-4 overflow-hidden border-4 border-primary/20 group-hover:border-primary transition-colors">
+          <div className="w-24 h-24 rounded-full bg-secondary flex items-center justify-center mb-4 overflow-hidden border-4 border-primary/20 group-hover:border-primary transition-colors flex-shrink-0">
             {image ? (
               <img
                 src={image}
@@ -36,10 +36,10 @@ const FacultyCard = ({ name, designation, quote, image }: FacultyCardProps) => {
           <h3 className="heading-4 text-foreground mb-1 group-hover:text-primary transition-colors">
             {name}
           </h3>
-          <p className="text-sm text-muted-foreground mb-4">{designation}</p>
+          <p className="text-sm text-muted-foreground mb-4 flex-shrink-0">{designation}</p>
 
           {quote && (
-            <p className="body-text text-sm italic">"{quote}"</p>
+            <p className="body-text text-sm italic mt-auto">"{quote}"</p>
           )}
         </div>
       </button>
