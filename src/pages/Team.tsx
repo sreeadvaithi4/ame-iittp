@@ -6,6 +6,7 @@ import PlaceholderModal from "@/components/shared/PlaceholderModal";
 import { User } from "lucide-react";
 import abirDuttaImage from "@/assets/faculty/abir-dutta.png";
 import govindSahuImage from "@/assets/faculty/govind-sahu.jpg";
+import pramodKumarImage from "@/assets/team/pramod-kumar.jpg";
 
 const facultyMembers = [
   {
@@ -30,7 +31,7 @@ const facultyMembers = [
 const studentReps = [
   { name: "Kambala Kiran Kumar", role: "President" },
   { name: "Nandagovind J V", role: "Vice-President" },
-  { name: "Pramod Kumar M", role: "Secretary" },
+  { name: "Pramod Kumar M", role: "Secretary", image: pramodKumarImage },
   { name: "Sree Advaithi", role: "Secretary" },
   { name: "Prithivi Nandakumar", role: "Coordinator" },
   { name: "Geddam Dhanumjay", role: "Coordinator" },
@@ -88,8 +89,12 @@ const Team = () => {
                 className="group bg-card border border-border rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 text-center animate-fade-in-up h-48 flex flex-col items-center justify-center"
                 style={{ animationDelay: `${index * 0.05}s` }}
               >
-                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 border-2 border-primary/30 group-hover:border-primary group-hover:bg-primary/20 transition-all duration-300">
-                  <User className="w-8 h-8 text-primary" />
+                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 border-2 border-primary/30 group-hover:border-primary group-hover:bg-primary/20 transition-all duration-300 overflow-hidden">
+                  {student.image ? (
+                    <img src={student.image} alt={student.name} className="w-full h-full object-cover" />
+                  ) : (
+                    <User className="w-8 h-8 text-primary" />
+                  )}
                 </div>
                 <p className="text-xs font-medium text-primary uppercase tracking-wider mb-2">
                   {student.role}
