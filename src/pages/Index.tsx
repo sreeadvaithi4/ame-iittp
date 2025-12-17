@@ -13,6 +13,7 @@ import {
   UserCircle,
   Camera
 } from "lucide-react";
+import abirDuttaImage from "@/assets/faculty/abir-dutta.png";
 
 const facultyMembers = [
   {
@@ -24,6 +25,7 @@ const facultyMembers = [
     name: "Dr. Abir Dutta",
     designation: "Faculty Member, Department of Mechanical Engineering, IIT Tirupati",
     quote: "The association bridges the gap between theoretical knowledge and practical applications.",
+    image: abirDuttaImage,
   },
   {
     name: "Dr. Mohd Furquan",
