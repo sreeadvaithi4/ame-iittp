@@ -5,12 +5,14 @@ import { useState } from "react";
 import PlaceholderModal from "@/components/shared/PlaceholderModal";
 import { User } from "lucide-react";
 import abirDuttaImage from "@/assets/faculty/abir-dutta.png";
+import govindSahuImage from "@/assets/faculty/govind-sahu.jpg";
 
 const facultyMembers = [
   {
     name: "Prof. Govind Narayan Sahu",
     designation: "Faculty Member, Department of Mechanical Engineering, IIT Tirupati",
     quote: "AME provides a vibrant platform for students to learn beyond the classroom.",
+    image: govindSahuImage,
   },
   {
     name: "Dr. Abir Dutta",
