@@ -7,6 +7,7 @@ import { User } from "lucide-react";
 import abirDuttaImage from "@/assets/faculty/abir-dutta.png";
 import govindSahuImage from "@/assets/faculty/govind-sahu.jpg";
 import pramodKumarImage from "@/assets/team/pramod-kumar.jpg";
+import nandagovindImage from "@/assets/team/nandagovind.jpg";
 
 const facultyMembers = [
   {
@@ -30,7 +31,7 @@ const facultyMembers = [
 
 const studentReps = [
   { name: "Kambala Kiran Kumar", role: "President" },
-  { name: "Nandagovind J V", role: "Vice-President" },
+  { name: "Nandagovind J V", role: "Vice-President", image: nandagovindImage },
   { name: "Pramod Kumar M", role: "Secretary", image: pramodKumarImage },
   { name: "Sree Advaithi", role: "Secretary" },
   { name: "Prithivi Nandakumar", role: "Coordinator" },
