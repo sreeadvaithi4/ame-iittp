@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import FacultyCard from "@/components/shared/FacultyCard";
 import { 
   Lightbulb, 
   Factory, 
@@ -11,28 +10,32 @@ import {
   Calendar,
   Wrench,
   UserCircle,
-  Camera
+  Camera,
+  Mail,
+  User
 } from "lucide-react";
 import abirDuttaImage from "@/assets/faculty/abir-dutta.png";
 import govindSahuImage from "@/assets/faculty/govind-sahu.jpg";
+import mohdFurquanImage from "@/assets/faculty/mohd-furquan.png";
 
 const facultyMembers = [
   {
-    name: "Prof. Govind Narayan Sahu",
-    designation: "Faculty Member, Department of Mechanical Engineering, IIT Tirupati",
-    quote: "AME provides a vibrant platform for students to learn beyond the classroom.",
+    name: "Dr. Govind Narayan Sahu",
+    designation: "Faculty Member, Dept. of Mechanical Engineering",
+    email: "govinds@iittp.ac.in",
     image: govindSahuImage,
   },
   {
     name: "Dr. Abir Dutta",
-    designation: "Faculty Member, Department of Mechanical Engineering, IIT Tirupati",
-    quote: "The association bridges the gap between theoretical knowledge and practical applications.",
+    designation: "Faculty Member, Dept. of Mechanical Engineering",
+    email: "abir.dutta@iittp.ac.in",
     image: abirDuttaImage,
   },
   {
     name: "Dr. Mohd Furquan",
-    designation: "Faculty Member, Department of Mechanical Engineering, IIT Tirupati",
-    quote: "AME nurtures future leaders in the field of mechanical engineering.",
+    designation: "Faculty Member, Dept. of Mechanical Engineering",
+    email: "mfurquan@iittp.ac.in",
+    image: mohdFurquanImage,
   },
 ];
 
@@ -103,13 +106,6 @@ const Index = () => {
             </div>
           </div>
         </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-muted-foreground rounded-full flex items-start justify-center p-1">
-            <div className="w-1.5 h-3 bg-muted-foreground rounded-full" />
-          </div>
-        </div>
       </section>
 
       {/* Vision & Purpose Section */}
@@ -155,24 +151,53 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Faculty Messages Section */}
+      {/* Faculty Members Section */}
       <section className="py-20 md:py-28 bg-secondary">
         <div className="container-section">
           <h2 className="heading-2 text-foreground text-center mb-4">
-            Messages from the <span className="text-primary">Faculty</span>
+            Our <span className="text-primary">Faculty</span> Members
           </h2>
           <p className="body-text text-center mb-12 max-w-2xl mx-auto">
-            Words of wisdom and encouragement from our esteemed faculty members
+            Meet our esteemed faculty members guiding AME initiatives
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {facultyMembers.map((faculty, index) => (
               <div
                 key={faculty.name}
-                className="animate-fade-in-up h-full"
+                className="bg-card border border-border rounded-xl p-6 text-center animate-fade-in-up hover:border-primary/30 transition-colors"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <FacultyCard {...faculty} />
+                {/* Avatar */}
+                <div className="w-24 h-24 rounded-full bg-secondary flex items-center justify-center mb-4 mx-auto overflow-hidden border-4 border-primary/20">
+                  {faculty.image ? (
+                    <img
+                      src={faculty.image}
+                      alt={faculty.name}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <User className="w-12 h-12 text-muted-foreground" />
+                  )}
+                </div>
+
+                {/* Info */}
+                <h3 className="text-lg font-semibold text-foreground mb-1">
+                  {faculty.name}
+                </h3>
+                <p className="text-sm text-muted-foreground mb-4">
+                  {faculty.designation}
+                </p>
+
+                {/* Email Icon */}
+                <a
+                  href={`mailto:${faculty.email}`}
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+                  title={`Email ${faculty.name}`}
+                >
+                  <Mail className="w-4 h-4" />
+                  <span className="text-sm">Contact</span>
+                </a>
               </div>
             ))}
           </div>

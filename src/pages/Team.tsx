@@ -1,31 +1,32 @@
 import Layout from "@/components/layout/Layout";
 import PageHeader from "@/components/shared/PageHeader";
-import FacultyCard from "@/components/shared/FacultyCard";
 import { useState } from "react";
 import PlaceholderModal from "@/components/shared/PlaceholderModal";
-import { User } from "lucide-react";
+import { User, Mail } from "lucide-react";
 import abirDuttaImage from "@/assets/faculty/abir-dutta.png";
 import govindSahuImage from "@/assets/faculty/govind-sahu.jpg";
+import mohdFurquanImage from "@/assets/faculty/mohd-furquan.png";
 import pramodKumarImage from "@/assets/team/pramod-kumar.jpg";
 import nandagovindImage from "@/assets/team/nandagovind.jpg";
 
 const facultyMembers = [
   {
-    name: "Prof. Govind Narayan Sahu",
+    name: "Dr. Govind Narayan Sahu",
     designation: "Faculty Member, Department of Mechanical Engineering, IIT Tirupati",
-    quote: "AME provides a vibrant platform for students to learn beyond the classroom.",
+    email: "govinds@iittp.ac.in",
     image: govindSahuImage,
   },
   {
     name: "Dr. Abir Dutta",
     designation: "Faculty Member, Department of Mechanical Engineering, IIT Tirupati",
-    quote: "The association bridges the gap between theoretical knowledge and practical applications.",
+    email: "abir.dutta@iittp.ac.in",
     image: abirDuttaImage,
   },
   {
     name: "Dr. Mohd Furquan",
     designation: "Faculty Member, Department of Mechanical Engineering, IIT Tirupati",
-    quote: "AME nurtures future leaders in the field of mechanical engineering.",
+    email: "mfurquan@iittp.ac.in",
+    image: mohdFurquanImage,
   },
 ];
 
@@ -59,14 +60,43 @@ const Team = () => {
             Our dedicated faculty mentors who guide and support AME initiatives
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {facultyMembers.map((faculty, index) => (
               <div
                 key={faculty.name}
-                className="animate-fade-in-up h-full"
+                className="bg-card border border-border rounded-xl p-6 text-center animate-fade-in-up hover:border-primary/30 transition-colors"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <FacultyCard {...faculty} />
+                {/* Avatar */}
+                <div className="w-24 h-24 rounded-full bg-secondary flex items-center justify-center mb-4 mx-auto overflow-hidden border-4 border-primary/20">
+                  {faculty.image ? (
+                    <img
+                      src={faculty.image}
+                      alt={faculty.name}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <User className="w-12 h-12 text-muted-foreground" />
+                  )}
+                </div>
+
+                {/* Info */}
+                <h3 className="text-lg font-semibold text-foreground mb-1">
+                  {faculty.name}
+                </h3>
+                <p className="text-sm text-muted-foreground mb-4">
+                  {faculty.designation}
+                </p>
+
+                {/* Email Icon */}
+                <a
+                  href={`mailto:${faculty.email}`}
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+                  title={`Email ${faculty.name}`}
+                >
+                  <Mail className="w-4 h-4" />
+                  <span className="text-sm">Contact</span>
+                </a>
               </div>
             ))}
           </div>
