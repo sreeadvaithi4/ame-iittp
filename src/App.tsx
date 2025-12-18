@@ -8,6 +8,7 @@ import Events from "./pages/Events";
 import Workshops from "./pages/Workshops";
 import Team from "./pages/Team";
 import LifeAtAME from "./pages/LifeAtAME";
+import Posts from "./pages/Posts";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/workshops" element={<Workshops />} />
           <Route path="/team" element={<Team />} />
           <Route path="/life-at-ame" element={<LifeAtAME />} />
+          <Route path="/posts" element={<Posts />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

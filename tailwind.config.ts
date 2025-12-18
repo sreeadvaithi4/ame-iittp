@@ -100,6 +100,18 @@ export default {
           "0%": { transform: "translateX(100%)" },
           "100%": { transform: "translateX(0)" },
         },
+        "spin-slow": {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
+        "spin-reverse": {
+          "0%": { transform: "rotate(360deg)" },
+          "100%": { transform: "rotate(0deg)" },
+        },
+        "pulse-slow": {
+          "0%, 100%": { opacity: "0.3" },
+          "50%": { opacity: "0.8" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -108,6 +120,9 @@ export default {
         "fade-in-up": "fade-in-up 0.6s ease-out forwards",
         "scale-in": "scale-in 0.3s ease-out forwards",
         "slide-in-right": "slide-in-right 0.3s ease-out",
+        "spin-slow": "spin-slow 60s linear infinite",
+        "spin-reverse": "spin-reverse 80s linear infinite",
+        "pulse-slow": "pulse-slow 4s ease-in-out infinite",
       },
     },
   },
