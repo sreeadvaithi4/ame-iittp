@@ -5,6 +5,7 @@ import { Lightbulb, Factory, Users, GraduationCap, ArrowRight, Calendar, Wrench,
 import abirDuttaImage from "@/assets/faculty/abir-dutta.png";
 import govindSahuImage from "@/assets/faculty/govind-sahu.jpg";
 import mohdFurquanImage from "@/assets/faculty/mohd-furquan.png";
+import heroBgImage from "@/assets/hero-bg.jpeg";
 const facultyMembers = [{
   name: "Dr. Govind Narayan Sahu",
   designation: "Faculty Member, Dept. of Mechanical Engineering",
@@ -59,6 +60,14 @@ const Index = () => {
   return <Layout>
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center bg-gradient-to-br from-secondary via-background to-secondary overflow-hidden">
+        {/* Background Logo */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <img 
+            src={heroBgImage} 
+            alt="" 
+            className="w-[60%] max-w-2xl opacity-10"
+          />
+        </div>
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-20 left-10 w-72 h-72 bg-primary rounded-full blur-3xl" />
