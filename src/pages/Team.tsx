@@ -8,6 +8,10 @@ import govindSahuImage from "@/assets/faculty/govind-sahu.jpg";
 import mohdFurquanImage from "@/assets/faculty/mohd-furquan.png";
 import pramodKumarImage from "@/assets/team/pramod-kumar.jpg";
 import nandagovindImage from "@/assets/team/nandagovind.jpg";
+import kiranKumarImage from "@/assets/team/kiran-kumar.jpg";
+import dhanumjayImage from "@/assets/team/dhanumjay.webp";
+import prithiviImage from "@/assets/team/prithivi.png";
+import pranaveshImage from "@/assets/team/pranavesh.jpeg";
 
 const facultyMembers = [
   {
@@ -43,6 +47,7 @@ const studentReps: StudentRep[] = [
   { 
     name: "K Kiran Kumar", 
     role: "President",
+    image: kiranKumarImage,
     linkedin: "https://www.linkedin.com/in/kiran-kumar-kambala/"
   },
   { 
@@ -67,17 +72,20 @@ const studentReps: StudentRep[] = [
   { 
     name: "Prithivi Nandakumar", 
     role: "Coordinator",
+    image: prithiviImage,
     linkedin: "https://www.linkedin.com/in/prithivi-nandakumar"
   },
   { 
     name: "Geddam Dhanumjay", 
     role: "Coordinator",
+    image: dhanumjayImage,
     instagram: "https://www.instagram.com/__dhanumjay007__",
     linkedin: "https://www.linkedin.com/in/dhanumjayg"
   },
   { 
     name: "Dasari Pranavesh Reddy", 
     role: "Coordinator",
+    image: pranaveshImage,
     linkedin: "https://www.linkedin.com/in/pranavesh-reddy-944b5a255"
   },
 ];
