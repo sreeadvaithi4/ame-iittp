@@ -1,4 +1,4 @@
-import { MapPin, Mail, Phone } from "lucide-react";
+import { MapPin, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -28,14 +28,10 @@ const Footer = () => {
               Contact Us
             </h3>
             <div className="space-y-2 text-sm text-background/70">
-              <p className="flex items-center gap-2">
+              <a href="mailto:ame@iittp.ac.in" className="flex items-center gap-2 hover:text-primary transition-colors">
                 <Mail className="w-4 h-4" />
                 ame@iittp.ac.in
-              </p>
-              <p className="flex items-center gap-2">
-                <Phone className="w-4 h-4" />
-                +91 XXXXXXXXXX
-              </p>
+              </a>
             </div>
           </div>
 

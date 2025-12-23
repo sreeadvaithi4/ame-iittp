@@ -1,9 +1,9 @@
 const EngineeringBackground = () => {
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
-      {/* Subtle gear pattern */}
+      {/* Subtle gear pattern - top left */}
       <svg
-        className="absolute top-10 left-10 w-32 h-32 text-primary/[0.03] animate-spin-slow"
+        className="absolute top-20 left-10 w-24 h-24 text-primary/[0.03] animate-spin-slow"
         viewBox="0 0 100 100"
         fill="currentColor"
       >
@@ -11,8 +11,9 @@ const EngineeringBackground = () => {
         <circle cx="50" cy="50" r="15" fill="hsl(var(--background))" />
       </svg>
 
+      {/* Subtle gear pattern - bottom right */}
       <svg
-        className="absolute bottom-20 right-20 w-48 h-48 text-primary/[0.02] animate-spin-reverse"
+        className="absolute bottom-32 right-16 w-32 h-32 text-primary/[0.02] animate-spin-reverse"
         viewBox="0 0 100 100"
         fill="currentColor"
       >
@@ -20,43 +21,16 @@ const EngineeringBackground = () => {
         <circle cx="50" cy="50" r="12" fill="hsl(var(--background))" />
       </svg>
 
-      {/* Circuit-like lines */}
-      <div className="absolute top-1/4 left-0 w-full">
-        <div className="h-px bg-gradient-to-r from-transparent via-primary/[0.04] to-transparent" />
-      </div>
-      <div className="absolute top-3/4 left-0 w-full">
-        <div className="h-px bg-gradient-to-r from-transparent via-primary/[0.03] to-transparent" />
-      </div>
-
-      {/* Vertical lines */}
-      <div className="absolute top-0 left-1/4 h-full">
-        <div className="w-px h-full bg-gradient-to-b from-transparent via-primary/[0.03] to-transparent" />
-      </div>
-      <div className="absolute top-0 right-1/4 h-full">
-        <div className="w-px h-full bg-gradient-to-b from-transparent via-primary/[0.03] to-transparent" />
-      </div>
-
-      {/* Floating dots representing nodes */}
-      <div className="absolute top-1/4 left-1/4 w-2 h-2 rounded-full bg-primary/[0.05] animate-pulse-slow" />
-      <div className="absolute top-1/4 right-1/4 w-2 h-2 rounded-full bg-primary/[0.05] animate-pulse-slow" style={{ animationDelay: '1s' }} />
-      <div className="absolute top-3/4 left-1/4 w-2 h-2 rounded-full bg-primary/[0.05] animate-pulse-slow" style={{ animationDelay: '2s' }} />
-      <div className="absolute top-3/4 right-1/4 w-2 h-2 rounded-full bg-primary/[0.05] animate-pulse-slow" style={{ animationDelay: '0.5s' }} />
-
-      {/* Subtle measurement marks */}
-      <div className="absolute top-1/3 right-10 flex flex-col gap-2 opacity-[0.03]">
-        {[...Array(5)].map((_, i) => (
-          <div key={i} className="flex items-center gap-1">
-            <div className="w-4 h-px bg-foreground" />
-            <div className="w-1 h-px bg-foreground" />
-          </div>
-        ))}
-      </div>
-
-      {/* Blueprint-style corner markers */}
-      <div className="absolute top-4 left-4 w-8 h-8 border-l border-t border-primary/[0.04]" />
-      <div className="absolute top-4 right-4 w-8 h-8 border-r border-t border-primary/[0.04]" />
-      <div className="absolute bottom-4 left-4 w-8 h-8 border-l border-b border-primary/[0.04]" />
-      <div className="absolute bottom-4 right-4 w-8 h-8 border-r border-b border-primary/[0.04]" />
+      {/* Small gear - center right */}
+      <svg
+        className="absolute top-1/2 right-8 w-16 h-16 text-primary/[0.02] animate-spin-slow"
+        style={{ animationDuration: '30s' }}
+        viewBox="0 0 100 100"
+        fill="currentColor"
+      >
+        <path d="M50 15 L54 28 L66 24 L61 37 L74 40 L64 50 L74 60 L61 63 L66 76 L54 72 L50 85 L46 72 L34 76 L39 63 L26 60 L36 50 L26 40 L39 37 L34 24 L46 28 Z" />
+        <circle cx="50" cy="50" r="10" fill="hsl(var(--background))" />
+      </svg>
     </div>
   );
 };

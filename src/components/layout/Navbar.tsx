@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
+import ameLogo from "@/assets/ame-logo.jpeg";
 
 const navigationItems = [
   { name: "Home", href: "/" },
@@ -72,10 +73,11 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
-            {/* Logo placeholder - space for future logo image */}
-            <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg bg-primary/10 border border-primary/30 flex items-center justify-center flex-shrink-0">
-              <span className="text-primary font-bold text-lg md:text-xl">A</span>
-            </div>
+            <img
+              src={ameLogo}
+              alt="AME IIT Tirupati Logo"
+              className="w-10 h-10 md:w-12 md:h-12 rounded-lg object-contain flex-shrink-0"
+            />
             <span className="text-xl md:text-2xl font-bold text-foreground">
               AME <span className="text-primary">IIT Tirupati</span>
             </span>
