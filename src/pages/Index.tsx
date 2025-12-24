@@ -5,7 +5,9 @@ import { Lightbulb, Factory, Users, GraduationCap, ArrowRight, Calendar, Wrench,
 import abirDuttaImage from "@/assets/faculty/abir-dutta.png";
 import govindSahuImage from "@/assets/faculty/govind-sahu.jpg";
 import mohdFurquanImage from "@/assets/faculty/mohd-furquan.png";
-import heroBgImage from "@/assets/hero-bg.jpeg";
+import EventCard from "@/components/shared/EventCard";
+import researchScholarsDayImage from "@/assets/events/research-scholars-day.jpeg";
+
 const facultyMembers = [{
   name: "Dr. Govind Narayan Sahu",
   designation: "Faculty Member, Dept. of Mechanical Engineering",
@@ -22,6 +24,7 @@ const facultyMembers = [{
   email: "mfurquan@iittp.ac.in",
   image: mohdFurquanImage
 }];
+
 const highlights = [{
   icon: <Lightbulb className="w-6 h-6" />,
   title: "Technical Excellence",
@@ -39,6 +42,7 @@ const highlights = [{
   title: "Holistic Development",
   description: "Balanced growth beyond academics"
 }];
+
 const quickLinks = [{
   name: "Events",
   href: "/events",
@@ -56,18 +60,11 @@ const quickLinks = [{
   href: "/life-at-ame",
   icon: <Camera className="w-6 h-6" />
 }];
+
 const Index = () => {
   return <Layout>
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center bg-gradient-to-br from-secondary via-background to-secondary overflow-hidden">
-        {/* Background Logo */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          <img 
-            src={heroBgImage} 
-            alt="" 
-            className="w-[60%] max-w-2xl opacity-10"
-          />
-        </div>
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-20 left-10 w-72 h-72 bg-primary rounded-full blur-3xl" />
@@ -78,7 +75,7 @@ const Index = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="heading-1 text-foreground mb-6 animate-fade-in">
               Association of{" "}
-              <span className="text-primary">Mechanical Engineers</span>,<br />
+              <span className="text-primary hover-text-zoom">Mechanical Engineers</span>,<br />
               IIT Tirupati
             </h1>
             <p className="body-large mb-4 animate-fade-in" style={{
@@ -108,18 +105,61 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Upcoming Events Section */}
+      <section className="relative py-20 md:py-28 bg-secondary overflow-hidden">
+        {/* Blueprint background animation */}
+        <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
+          <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="blueprint-grid" width="50" height="50" patternUnits="userSpaceOnUse">
+                <path d="M 50 0 L 0 0 0 50" fill="none" stroke="currentColor" strokeWidth="0.5" className="text-foreground" />
+              </pattern>
+              <pattern id="blueprint-circles" width="100" height="100" patternUnits="userSpaceOnUse">
+                <circle cx="50" cy="50" r="20" fill="none" stroke="currentColor" strokeWidth="0.3" className="text-primary" />
+                <circle cx="50" cy="50" r="35" fill="none" stroke="currentColor" strokeWidth="0.2" className="text-primary" />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#blueprint-grid)" />
+            <rect width="100%" height="100%" fill="url(#blueprint-circles)" className="animate-[pulse_8s_ease-in-out_infinite]" />
+          </svg>
+        </div>
+
+        <div className="container-section relative z-10">
+          {/* Section Header */}
+          <div className="text-center mb-12">
+            <h2 className="text-sm font-bold uppercase tracking-[0.2em] text-primary mb-2">
+              UPCOMING EVENTS
+            </h2>
+            <div className="w-20 h-0.5 bg-primary/50 mx-auto" />
+          </div>
+
+          {/* Event Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <EventCard
+              title="Research Scholar Day – ME Department"
+              description="UG students and PG research scholars will present their work"
+              date="6th January 2026"
+              image={researchScholarsDayImage}
+              featured
+            />
+            <EventCard
+              title="Hands-on Workshop on MATLAB"
+              date="Second Week of January 2026"
+              href="/workshops"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Vision & Purpose Section */}
       <section className="py-20 md:py-28 bg-background">
         <div className="container-section">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="heading-2 text-foreground mb-8">
-              Our <span className="text-primary">Vision
-
-
-            </span> and Purpose
+              Our <span className="text-primary hover-text-zoom">Vision</span> and <span className="hover-text-zoom">Purpose</span>
             </h2>
             <p className="body-large leading-relaxed mb-12">
-              The Association of Mechanical Engineers at IIT Tirupati plays a crucial
+              The Association of <span className="hover-text-zoom">Mechanical Engineers</span> at IIT Tirupati plays a crucial
               role in fostering a comprehensive and well-rounded educational experience
               for mechanical engineering students. Through its diverse portfolio of
               initiatives, including technical workshops, industrial visits, expert
@@ -138,7 +178,7 @@ const Index = () => {
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4 mx-auto">
                     {item.icon}
                   </div>
-                  <h3 className="font-semibold text-foreground mb-2">
+                  <h3 className="font-semibold text-foreground mb-2 hover-text-zoom">
                     {item.title}
                   </h3>
                   <p className="text-sm text-muted-foreground">
@@ -154,7 +194,7 @@ const Index = () => {
       <section className="py-20 md:py-28 bg-secondary">
         <div className="container-section">
           <h2 className="heading-2 text-foreground text-center mb-4">
-            Our <span className="text-primary">Faculty</span> Members
+            Our <span className="text-primary hover-text-zoom">Faculty</span> Members
           </h2>
           <p className="body-text text-center mb-12 max-w-2xl mx-auto">
             Meet our esteemed faculty members guiding AME initiatives
@@ -170,7 +210,7 @@ const Index = () => {
                 </div>
 
                 {/* Info */}
-                <h3 className="text-lg font-semibold text-foreground mb-1">
+                <h3 className="text-lg font-semibold text-foreground mb-1 hover-text-zoom">
                   {faculty.name}
                 </h3>
                 <p className="text-sm text-muted-foreground mb-4">
@@ -191,7 +231,7 @@ const Index = () => {
       <section className="py-20 md:py-28 bg-background">
         <div className="container-section">
           <h2 className="heading-2 text-foreground text-center mb-4">
-            Explore <span className="text-primary">AME</span>
+            Explore <span className="text-primary hover-text-zoom">AME</span>
           </h2>
           <p className="body-text text-center mb-12 max-w-2xl mx-auto">
             Quick access to everything AME has to offer
@@ -204,7 +244,7 @@ const Index = () => {
                 <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                   {link.icon}
                 </div>
-                <span className="font-semibold text-foreground group-hover:text-primary transition-colors">
+                <span className="font-semibold text-foreground group-hover:text-primary transition-colors hover-text-zoom">
                   {link.name}
                 </span>
               </Link>)}

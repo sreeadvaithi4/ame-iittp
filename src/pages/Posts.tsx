@@ -1,6 +1,16 @@
 import Layout from "@/components/layout/Layout";
 import PageHeader from "@/components/shared/PageHeader";
-import { ImageIcon } from "lucide-react";
+import InstagramPost from "@/components/shared/InstagramPost";
+import researchScholarsDayImage from "@/assets/events/research-scholars-day.jpeg";
+
+const posts = [
+  {
+    id: 1,
+    image: researchScholarsDayImage,
+    caption: "Research Scholar Day, 2026",
+    date: "6th January 2026",
+  },
+];
 
 const Posts = () => {
   return (
@@ -12,19 +22,29 @@ const Posts = () => {
 
       <section className="py-16 md:py-24 bg-background">
         <div className="container-section">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-card border border-border rounded-xl p-12 animate-fade-in">
-              <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
-                <ImageIcon className="w-10 h-10 text-primary" />
-              </div>
-              <h2 className="heading-4 text-foreground mb-4">
-                Coming Soon
-              </h2>
-              <p className="body-text max-w-md mx-auto">
-                We're preparing exciting content for you! Check back soon for updates on club inauguration, upcoming events, and more activities from AME.
-              </p>
+          {posts.length > 0 ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {posts.map((post) => (
+                <InstagramPost
+                  key={post.id}
+                  image={post.image}
+                  caption={post.caption}
+                  date={post.date}
+                />
+              ))}
             </div>
-          </div>
+          ) : (
+            <div className="max-w-4xl mx-auto text-center">
+              <div className="bg-card border border-border rounded-xl p-12 animate-fade-in">
+                <h2 className="heading-4 text-foreground mb-4">
+                  Coming Soon
+                </h2>
+                <p className="body-text max-w-md mx-auto">
+                  We're preparing exciting content for you! Check back soon for updates.
+                </p>
+              </div>
+            </div>
+          )}
         </div>
       </section>
     </Layout>
