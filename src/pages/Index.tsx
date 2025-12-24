@@ -7,6 +7,7 @@ import govindSahuImage from "@/assets/faculty/govind-sahu.jpg";
 import mohdFurquanImage from "@/assets/faculty/mohd-furquan.png";
 import EventCard from "@/components/shared/EventCard";
 import researchScholarsDayImage from "@/assets/events/research-scholars-day.jpeg";
+import matlabWorkshopImage from "@/assets/events/matlab-workshop.png";
 
 const facultyMembers = [{
   name: "Dr. Govind Narayan Sahu",
@@ -127,7 +128,7 @@ const Index = () => {
         <div className="container-section relative z-10">
           {/* Section Header */}
           <div className="text-center mb-12">
-            <h2 className="text-sm font-bold uppercase tracking-[0.2em] text-primary mb-2">
+            <h2 className="text-lg font-bold uppercase tracking-[0.2em] text-primary mb-2 hover-text-zoom cursor-default">
               UPCOMING EVENTS
             </h2>
             <div className="w-20 h-0.5 bg-primary/50 mx-auto" />
@@ -137,7 +138,6 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <EventCard
               title="Research Scholar Day – ME Department"
-              description="UG students and PG research scholars will present their work"
               date="6th January 2026"
               image={researchScholarsDayImage}
               featured
@@ -145,7 +145,8 @@ const Index = () => {
             <EventCard
               title="Hands-on Workshop on MATLAB"
               date="Second Week of January 2026"
-              href="/workshops"
+              image={matlabWorkshopImage}
+              href="/workshops#matlab"
             />
           </div>
         </div>

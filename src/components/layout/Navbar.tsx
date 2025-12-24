@@ -23,20 +23,13 @@ const navigationItems = [
     href: "/workshops",
     children: [
       { name: "All", href: "/workshops" },
-      { name: "3D Printing", href: "/workshops" },
-      { name: "Matlab", href: "/workshops" },
-      { name: "Autodesk", href: "/workshops" },
-      { name: "Abaqus", href: "/workshops" },
+      { name: "3D Printing", href: "/workshops#3d-printing" },
+      { name: "Matlab", href: "/workshops#matlab" },
+      { name: "Autodesk", href: "/workshops#autodesk" },
+      { name: "Abaqus", href: "/workshops#abaqus" },
     ],
   },
-  {
-    name: "Posts",
-    href: "/posts",
-    children: [
-      { name: "Club Inauguration", href: "/posts" },
-      { name: "Upcoming Events", href: "/posts" },
-    ],
-  },
+  { name: "Posts", href: "/posts" },
   {
     name: "Team",
     href: "/team",

@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import PageHeader from "@/components/shared/PageHeader";
 import CategoryCard from "@/components/shared/CategoryCard";
@@ -11,26 +13,31 @@ import {
 
 const workshopCategories = [
   {
+    id: "all",
     title: "All Workshops",
     description: "Browse all available workshops and training sessions.",
     icon: <LayoutGrid className="w-6 h-6" />,
   },
   {
+    id: "3d-printing",
     title: "3D Printing",
     description: "Learn additive manufacturing and rapid prototyping techniques.",
     icon: <Printer className="w-6 h-6" />,
   },
   {
+    id: "matlab",
     title: "Matlab",
     description: "Master computational analysis and simulation with MATLAB.",
     icon: <Calculator className="w-6 h-6" />,
   },
   {
+    id: "autodesk",
     title: "Autodesk",
     description: "Develop CAD skills with industry-standard Autodesk tools.",
     icon: <PenTool className="w-6 h-6" />,
   },
   {
+    id: "abaqus",
     title: "Abaqus",
     description: "Learn finite element analysis for engineering simulations.",
     icon: <Box className="w-6 h-6" />,
@@ -38,6 +45,19 @@ const workshopCategories = [
 ];
 
 const Workshops = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.getElementById(location.hash.slice(1));
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth", block: "center" });
+        }, 100);
+      }
+    }
+  }, [location.hash]);
+
   return (
     <Layout>
       <PageHeader
@@ -51,7 +71,8 @@ const Workshops = () => {
             {workshopCategories.map((category, index) => (
               <div
                 key={category.title}
-                className="animate-fade-in-up"
+                id={category.id}
+                className="animate-fade-in-up scroll-mt-24"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CategoryCard {...category} />
