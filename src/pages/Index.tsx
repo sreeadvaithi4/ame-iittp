@@ -157,7 +157,7 @@ const Index = () => {
         <div className="container-section">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="heading-2 text-foreground mb-8">
-              Our <span className="text-primary hover-text-zoom">Vision</span> and <span className="hover-text-zoom">Purpose</span>
+              Our <span className="text-primary hover-text-zoom cursor-default">Vision</span> and <span className="text-primary hover-text-zoom cursor-default">Purpose</span>
             </h2>
             <p className="body-large leading-relaxed mb-12">
               The Association of <span className="hover-text-zoom">Mechanical Engineers</span> at IIT Tirupati plays a crucial

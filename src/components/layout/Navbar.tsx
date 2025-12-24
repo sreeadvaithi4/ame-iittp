@@ -22,9 +22,9 @@ const navigationItems = [
     name: "Workshops",
     href: "/workshops",
     children: [
-      { name: "All", href: "/workshops" },
+      { name: "All", href: "/workshops#all" },
       { name: "3D Printing", href: "/workshops#3d-printing" },
-      { name: "Matlab", href: "/workshops#matlab" },
+      { name: "Matlab – Hands-on Workshop", href: "/workshops#matlab" },
       { name: "Autodesk", href: "/workshops#autodesk" },
       { name: "Abaqus", href: "/workshops#abaqus" },
     ],
