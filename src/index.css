@@ -112,4 +112,15 @@
   .btn-hover {
     @apply transition-all duration-200 hover:scale-[1.02] active:scale-[0.98];
   }
+
+  /* Text hover zoom animation - desktop only */
+  .hover-text-zoom {
+    @apply inline-block transition-all duration-200 ease-out;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .hover-text-zoom:hover {
+      @apply scale-105 text-primary;
+    }
+  }
 }
