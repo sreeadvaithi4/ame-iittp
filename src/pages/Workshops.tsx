@@ -11,7 +11,7 @@ import {
   Box,
   Calendar
 } from "lucide-react";
-import matlabWorkshopImage from "@/assets/events/matlab-workshop.png";
+import matlabWorkshopImage from "@/assets/events/matlab-workshop-new.png";
 
 const workshopCategories = [
   {
