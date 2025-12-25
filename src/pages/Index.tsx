@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { Lightbulb, Factory, Users, GraduationCap, ArrowRight, Calendar, Wrench, UserCircle, Camera, Mail, User } from "lucide-react";
+import { Lightbulb, Factory, Users, GraduationCap, ArrowRight, Calendar, Wrench, UserCircle, Camera, Mail, User, FileText } from "lucide-react";
 import abirDuttaImage from "@/assets/faculty/abir-dutta.png";
 import govindSahuImage from "@/assets/faculty/govind-sahu.jpg";
 import mohdFurquanImage from "@/assets/faculty/mohd-furquan.png";
 import EventCard from "@/components/shared/EventCard";
 import researchScholarsDayImage from "@/assets/events/research-scholars-day.jpeg";
-import matlabWorkshopImage from "@/assets/events/matlab-workshop.png";
+import matlabWorkshopImage from "@/assets/events/matlab-workshop-new.png";
 
 const facultyMembers = [{
   name: "Dr. Govind Narayan Sahu",
@@ -53,6 +53,10 @@ const quickLinks = [{
   href: "/workshops",
   icon: <Wrench className="w-6 h-6" />
 }, {
+  name: "Posts",
+  href: "/posts",
+  icon: <FileText className="w-6 h-6" />
+}, {
   name: "Team",
   href: "/team",
   icon: <UserCircle className="w-6 h-6" />
@@ -93,8 +97,8 @@ const Index = () => {
             animationDelay: "0.3s"
           }}>
               <Button asChild variant="hero" size="lg">
-                <Link to="/events">
-                  Explore Events
+                <Link to="/posts">
+                  Explore Posts
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </Button>
@@ -238,7 +242,7 @@ const Index = () => {
             Quick access to everything AME has to offer
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 max-w-5xl mx-auto">
             {quickLinks.map((link, index) => <Link key={link.name} to={link.href} className="group flex flex-col items-center p-8 bg-card border-2 border-border rounded-xl card-hover hover:border-primary animate-fade-in-up" style={{
             animationDelay: `${index * 0.1}s`
           }}>
