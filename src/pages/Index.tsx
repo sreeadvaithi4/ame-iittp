@@ -150,7 +150,7 @@ const Index = () => {
               title="Hands-on Workshop on MATLAB"
               date="Second Week of January 2026"
               image={matlabWorkshopImage}
-              href="/workshops/matlab"
+              href="/workshops#matlab"
             />
           </div>
         </div>
