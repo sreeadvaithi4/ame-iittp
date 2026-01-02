@@ -13,6 +13,7 @@ import NotFound from "./pages/NotFound";
 
 // Workshop pages
 import MatlabWorkshop from "./pages/workshops/MatlabWorkshop";
+import PythonWorkshop from "./pages/workshops/PythonWorkshop";
 import ThreeDPrinting from "./pages/workshops/ThreeDPrinting";
 import Autodesk from "./pages/workshops/Autodesk";
 import Abaqus from "./pages/workshops/Abaqus";
@@ -49,6 +50,7 @@ const App = () => (
           
           {/* Workshop routes */}
           <Route path="/workshops/matlab" element={<MatlabWorkshop />} />
+          <Route path="/workshops/python" element={<PythonWorkshop />} />
           <Route path="/workshops/3d-printing" element={<ThreeDPrinting />} />
           <Route path="/workshops/autodesk" element={<Autodesk />} />
           <Route path="/workshops/abaqus" element={<Abaqus />} />
