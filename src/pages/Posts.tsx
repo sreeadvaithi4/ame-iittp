@@ -16,7 +16,7 @@ const Posts = () => {
   return (
     <Layout>
       <PageHeader
-        title="Posts"
+        title="Articles"
         subtitle="Stay updated with AME's latest announcements and event highlights"
       />
 

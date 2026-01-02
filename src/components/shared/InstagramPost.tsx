@@ -18,7 +18,7 @@ const InstagramPost = ({ image, caption, date, className }: InstagramPostProps) 
     return `${window.location.origin}${path}`;
   };
 
-  const shareUrl = `${window.location.origin}/posts`;
+  const shareUrl = `${window.location.origin}/articles`;
   const shareText = `${caption} - AME IIT Tirupati`;
   const imageUrl = getAbsoluteUrl(image);
 
