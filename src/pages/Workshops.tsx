@@ -2,12 +2,12 @@ import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import PageHeader from "@/components/shared/PageHeader";
 import { 
-  LayoutGrid, 
   Printer, 
   Calculator, 
   PenTool, 
   Box,
-  ArrowRight
+  ArrowRight,
+  Code
 } from "lucide-react";
 
 const workshopCategories = [
@@ -24,6 +24,13 @@ const workshopCategories = [
     description: "Master computational analysis and simulation with MATLAB.",
     icon: <Calculator className="w-6 h-6" />,
     href: "/workshops/matlab",
+  },
+  {
+    id: "python",
+    title: "Python",
+    description: "Learn Python programming for engineering applications.",
+    icon: <Code className="w-6 h-6" />,
+    href: "/workshops/python",
   },
   {
     id: "autodesk",
@@ -51,12 +58,12 @@ const Workshops = () => {
 
       <section className="py-16 md:py-24 bg-background">
         <div className="container-section">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {workshopCategories.map((category, index) => (
               <Link
                 key={category.id}
                 to={category.href}
-                className="group bg-card border border-border rounded-xl p-6 hover:border-primary/50 hover:shadow-lg transition-all duration-300 animate-fade-in-up"
+                className="group bg-amber-900/20 border border-amber-800/30 rounded-xl p-6 hover:border-primary/50 hover:shadow-lg transition-all duration-300 animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
