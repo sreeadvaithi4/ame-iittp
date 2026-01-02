@@ -54,7 +54,7 @@ const quickLinks = [{
   icon: <Wrench className="w-6 h-6" />
 }, {
   name: "Articles",
-  href: "/posts",
+  href: "/articles",
   icon: <FileText className="w-6 h-6" />
 }, {
   name: "Team",
@@ -72,8 +72,8 @@ const upcomingEvents = [
     title: "Research Scholar Day – ME Department",
     description: "Join us for a day celebrating research excellence in mechanical engineering. Presentations, discussions, and networking opportunities with faculty and research scholars.",
     date: "6th January 2026",
-    time: "9:00 AM - 5:00 PM",
-    venue: "IIT Tirupati Campus",
+    time: "9:30 AM",
+    venue: "LHC",
     image: researchScholarsDayImage,
     href: "/events"
   },
@@ -82,8 +82,8 @@ const upcomingEvents = [
     title: "Hands-on Workshop on MATLAB",
     description: "Master computational analysis and simulation with industry-standard MATLAB tools. Learn practical applications for mechanical engineering problems.",
     date: "Second Week of January 2026",
-    time: "2 Days Workshop",
-    venue: "IIT Tirupati Campus",
+    time: "9:30 AM",
+    venue: "LHC",
     image: matlabWorkshopImage,
     href: "/workshops/matlab"
   }
@@ -166,34 +166,25 @@ const Index = () => {
                   alt={event.title}
                   className="w-full h-full object-cover"
                 />
-                {/* Dark Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
               </div>
 
-              {/* Content */}
-              <div className="relative h-full container-section flex items-center">
-                <div className="max-w-2xl text-left">
-                  <div className="flex items-center gap-2 text-primary mb-4">
-                    <Calendar className="w-5 h-5" />
-                    <span className="text-sm font-medium uppercase tracking-wider">Upcoming Event</span>
-                  </div>
-                  <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
+              {/* Text Overlay Box - Bottom Center */}
+              <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 w-full max-w-3xl px-4">
+                <div className="bg-black/65 backdrop-blur-sm rounded-xl px-8 py-6">
+                  <h2 className="text-2xl md:text-4xl font-bold text-white mb-2 line-clamp-2">
                     {event.title}
                   </h2>
-                  <p className="text-gray-200 text-lg mb-6 line-clamp-3">
-                    {event.description}
-                  </p>
-                  <div className="flex flex-wrap gap-6 text-gray-300">
+                  <div className="flex flex-wrap items-center gap-4 text-gray-200 text-sm md:text-base">
                     <div className="flex items-center gap-2">
-                      <Calendar className="w-5 h-5 text-primary" />
+                      <Calendar className="w-4 h-4 text-primary" />
                       <span>{event.date}</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Clock className="w-5 h-5 text-primary" />
+                      <Clock className="w-4 h-4 text-primary" />
                       <span>{event.time}</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <MapPin className="w-5 h-5 text-primary" />
+                      <MapPin className="w-4 h-4 text-primary" />
                       <span>{event.venue}</span>
                     </div>
                   </div>
@@ -219,7 +210,7 @@ const Index = () => {
           </button>
 
           {/* Dot Indicators */}
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-3">
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex gap-3">
             {upcomingEvents.map((_, index) => (
               <button
                 key={index}

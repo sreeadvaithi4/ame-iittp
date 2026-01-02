@@ -42,7 +42,7 @@ const Footer = () => {
               {[
                 { name: "Events", href: "/events" },
                 { name: "Workshops", href: "/workshops" },
-                { name: "Posts", href: "/posts" },
+                { name: "Articles", href: "/articles" },
                 { name: "Team", href: "/team" },
                 { name: "Life at AME", href: "/life-at-ame" },
               ].map((link) => (
