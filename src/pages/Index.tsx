@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { Lightbulb, Factory, Users, GraduationCap, ArrowRight, Calendar, Wrench, UserCircle, Camera, Mail, User, FileText, MapPin, Clock } from "lucide-react";
+import { Lightbulb, Factory, Users, GraduationCap, ArrowRight, Calendar, Wrench, UserCircle, Camera, Mail, User, FileText, MapPin, Clock, ExternalLink } from "lucide-react";
 import abirDuttaImage from "@/assets/faculty/abir-dutta.png";
 import govindSahuImage from "@/assets/faculty/govind-sahu.jpg";
 import mohdFurquanImage from "@/assets/faculty/mohd-furquan.png";
@@ -75,7 +75,8 @@ const upcomingEvents = [
     time: "9:30 AM - 12:30 PM",
     venue: "AB2 - CR104",
     image: matlabWorkshopImage,
-    href: "/workshops/matlab"
+    href: "/workshops/matlab",
+    registerLink: "https://forms.gle/R29UZbvqKEWpV59dA"
   },
   {
     id: 2,
@@ -85,7 +86,8 @@ const upcomingEvents = [
     time: "9:30 AM - 12:30 PM",
     venue: "AB2 - CR104",
     image: pythonWorkshopImage,
-    href: "/workshops/python"
+    href: "/workshops/python",
+    registerLink: "https://forms.gle/842o8eFnQu8E23L6A"
   },
   {
     id: 3,
@@ -95,7 +97,8 @@ const upcomingEvents = [
     time: "9:30 AM - 12:30 PM",
     venue: "AB2 - CR104",
     image: latexWorkshopImage,
-    href: "/workshops/latex"
+    href: "/workshops/latex",
+    registerLink: "https://forms.gle/LaTeXWorkshop2025"
   }
 ];
 
@@ -128,13 +131,13 @@ const Index = () => {
             <div className="flex flex-wrap gap-4 justify-center animate-fade-in" style={{
             animationDelay: "0.3s"
           }}>
-              <Button asChild variant="hero" size="lg">
+              <Button asChild variant="hero" size="lg" className="transition-all duration-300 hover:scale-105 hover:shadow-lg">
                 <Link to="/events">
                   Explore Events
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </Button>
-              <Button asChild variant="hero-outline" size="lg">
+              <Button asChild variant="hero-outline" size="lg" className="transition-all duration-300 hover:scale-105 hover:shadow-lg">
                 <Link to="/team">Meet the Team</Link>
               </Button>
             </div>
@@ -154,13 +157,12 @@ const Index = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {upcomingEvents.map((event) => (
-              <Link
+              <div
                 key={event.id}
-                to={event.href}
-                className="group bg-card border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                className="group bg-muted/50 border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]"
               >
                 {/* Image with Date Badge */}
-                <div className="relative aspect-[3/4] overflow-hidden">
+                <Link to={event.href} className="block relative aspect-[3/4] overflow-hidden">
                   <img
                     src={event.image}
                     alt={event.title}
@@ -170,18 +172,20 @@ const Index = () => {
                   <div className="absolute top-3 left-3 bg-primary text-primary-foreground px-3 py-1.5 rounded-md text-sm font-semibold shadow-lg">
                     {event.date}
                   </div>
-                </div>
+                </Link>
 
                 {/* Content */}
                 <div className="p-5">
-                  <h3 className="font-bold text-lg text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2">
-                    {event.title}
-                  </h3>
+                  <Link to={event.href}>
+                    <h3 className="font-bold text-lg text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2">
+                      {event.title}
+                    </h3>
+                  </Link>
                   <p className="text-sm text-muted-foreground mb-3 line-clamp-2">
                     {event.description}
                   </p>
                   
-                  <div className="flex flex-wrap items-center gap-3 text-xs text-muted-foreground mb-3">
+                  <div className="flex flex-wrap items-center gap-3 text-xs text-muted-foreground mb-4">
                     <div className="flex items-center gap-1">
                       <Clock className="w-3.5 h-3.5 text-primary" />
                       <span>{event.time}</span>
@@ -192,12 +196,19 @@ const Index = () => {
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-1 text-primary text-sm font-medium">
-                    <span>View Details</span>
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </div>
+                  {/* Register Button */}
+                  <a
+                    href={event.registerLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium hover:bg-primary/90 transition-all duration-300 hover:scale-105 hover:shadow-md w-full justify-center"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    Register Now
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
                 </div>
-              </Link>
+              </div>
             ))}
           </div>
         </div>
@@ -224,10 +235,10 @@ const Index = () => {
 
             {/* Highlights */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {highlights.map((item, index) => <div key={item.title} className="p-6 rounded-xl bg-secondary/50 border border-border hover:border-primary/30 transition-colors animate-fade-in-up" style={{
+              {highlights.map((item, index) => <div key={item.title} className="p-6 rounded-xl bg-muted/50 border border-border hover:border-primary/30 transition-all duration-300 animate-fade-in-up hover:scale-105 hover:shadow-md" style={{
               animationDelay: `${index * 0.1}s`
             }}>
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4 mx-auto">
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4 mx-auto group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                     {item.icon}
                   </div>
                   <h3 className="font-semibold text-foreground mb-2 hover-text-zoom">
@@ -252,25 +263,25 @@ const Index = () => {
             Meet our esteemed faculty members guiding AME initiatives
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {facultyMembers.map((faculty, index) => <div key={faculty.name} className="bg-card border border-border rounded-xl p-8 text-center animate-fade-in-up hover:border-primary/30 transition-colors" style={{
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
+            {facultyMembers.map((faculty, index) => <div key={faculty.name} className="bg-muted/50 border border-border rounded-xl p-6 md:p-8 text-center animate-fade-in-up hover:border-primary/30 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg" style={{
             animationDelay: `${index * 0.1}s`
           }}>
                 {/* Avatar */}
-                <div className="w-36 h-36 rounded-full bg-secondary flex items-center justify-center mb-6 mx-auto overflow-hidden border-4 border-primary/20">
-                  {faculty.image ? <img src={faculty.image} alt={faculty.name} className="w-full h-full object-cover" /> : <User className="w-16 h-16 text-muted-foreground" />}
+                <div className="w-28 h-28 md:w-36 md:h-36 rounded-full bg-secondary flex items-center justify-center mb-4 md:mb-6 mx-auto overflow-hidden border-4 border-primary/20 transition-all duration-300 hover:border-primary">
+                  {faculty.image ? <img src={faculty.image} alt={faculty.name} className="w-full h-full object-cover" /> : <User className="w-12 h-12 md:w-16 md:h-16 text-muted-foreground" />}
                 </div>
 
                 {/* Info */}
-                <h3 className="text-xl font-semibold text-foreground mb-2 hover-text-zoom">
+                <h3 className="text-lg md:text-xl font-semibold text-foreground mb-2 hover-text-zoom">
                   {faculty.name}
                 </h3>
-                <p className="text-sm text-muted-foreground mb-4">
+                <p className="text-xs md:text-sm text-muted-foreground mb-4">
                   {faculty.designation}
                 </p>
 
                 {/* Email Icon */}
-                <a href={`mailto:${faculty.email}`} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors" title={`Email ${faculty.name}`}>
+                <a href={`mailto:${faculty.email}`} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-105" title={`Email ${faculty.name}`}>
                   <Mail className="w-4 h-4" />
                   <span className="text-sm">Contact</span>
                 </a>
@@ -289,14 +300,14 @@ const Index = () => {
             Quick access to everything AME has to offer
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 max-w-5xl mx-auto">
-            {quickLinks.map((link, index) => <Link key={link.name} to={link.href} className="group flex flex-col items-center p-8 bg-card border-2 border-border rounded-xl card-hover hover:border-primary animate-fade-in-up" style={{
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 max-w-5xl mx-auto">
+            {quickLinks.map((link, index) => <Link key={link.name} to={link.href} className="group flex flex-col items-center p-6 md:p-8 bg-muted/50 border-2 border-border rounded-xl card-hover hover:border-primary animate-fade-in-up transition-all duration-300 hover:scale-105" style={{
             animationDelay: `${index * 0.1}s`
           }}>
-                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-3 md:mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
                   {link.icon}
                 </div>
-                <span className="font-semibold text-foreground group-hover:text-primary transition-colors hover-text-zoom">
+                <span className="font-semibold text-sm md:text-base text-foreground group-hover:text-primary transition-colors hover-text-zoom">
                   {link.name}
                 </span>
               </Link>)}
