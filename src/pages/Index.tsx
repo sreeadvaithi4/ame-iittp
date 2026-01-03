@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
-import { useState, useEffect, useCallback } from "react";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { Lightbulb, Factory, Users, GraduationCap, ArrowRight, Calendar, Wrench, UserCircle, Camera, Mail, User, FileText, ChevronLeft, ChevronRight, MapPin, Clock } from "lucide-react";
+import { Lightbulb, Factory, Users, GraduationCap, ArrowRight, Calendar, Wrench, UserCircle, Camera, Mail, User, FileText, MapPin, Clock } from "lucide-react";
 import abirDuttaImage from "@/assets/faculty/abir-dutta.png";
 import govindSahuImage from "@/assets/faculty/govind-sahu.jpg";
 import mohdFurquanImage from "@/assets/faculty/mohd-furquan.png";
-import researchScholarsDayImage from "@/assets/events/research-scholars-day.jpeg";
 import matlabWorkshopImage from "@/assets/events/matlab-workshop-new.png";
+import pythonWorkshopImage from "@/assets/events/python-workshop.png";
+import latexWorkshopImage from "@/assets/events/latex-workshop.png";
 
 const facultyMembers = [{
   name: "Dr. Govind Narayan Sahu",
@@ -69,46 +69,40 @@ const quickLinks = [{
 const upcomingEvents = [
   {
     id: 1,
-    title: "Research Scholar Day – ME Department",
-    description: "Join us for a day celebrating research excellence in mechanical engineering. Presentations, discussions, and networking opportunities with faculty and research scholars.",
-    date: "6th January 2026",
-    time: "9:30 AM",
-    venue: "LHC",
-    image: researchScholarsDayImage,
-    href: "/events"
+    title: "MATLAB & Simulink Workshop",
+    description: "Master computational analysis and simulation with industry-standard MATLAB tools.",
+    date: "January 10th",
+    time: "9:30 AM - 12:30 PM",
+    venue: "AB2 - CR104",
+    image: matlabWorkshopImage,
+    href: "/workshops/matlab"
   },
   {
     id: 2,
-    title: "Hands-on Workshop on MATLAB",
-    description: "Master computational analysis and simulation with industry-standard MATLAB tools. Learn practical applications for mechanical engineering problems.",
-    date: "Second Week of January 2026",
-    time: "9:30 AM",
-    venue: "LHC",
-    image: matlabWorkshopImage,
-    href: "/workshops/matlab"
+    title: "Python Workshop",
+    description: "Learn Python programming from scratch and apply it to solve engineering problems.",
+    date: "January 17th",
+    time: "9:30 AM - 12:30 PM",
+    venue: "AB2 - CR104",
+    image: pythonWorkshopImage,
+    href: "/workshops/python"
+  },
+  {
+    id: 3,
+    title: "LaTeX Workshop",
+    description: "Professional document preparation for research papers, thesis, and reports.",
+    date: "January 24th",
+    time: "9:30 AM - 12:30 PM",
+    venue: "AB2 - CR104",
+    image: latexWorkshopImage,
+    href: "/workshops/latex"
   }
 ];
 
 const Index = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const nextSlide = useCallback(() => {
-    setCurrentSlide((prev) => (prev + 1) % upcomingEvents.length);
-  }, []);
-
-  const prevSlide = useCallback(() => {
-    setCurrentSlide((prev) => (prev - 1 + upcomingEvents.length) % upcomingEvents.length);
-  }, []);
-
-  // Auto-rotate slides
-  useEffect(() => {
-    const interval = setInterval(nextSlide, 6000);
-    return () => clearInterval(interval);
-  }, [nextSlide]);
-
   return <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center bg-gradient-to-br from-secondary via-background to-secondary overflow-hidden">
+      <section className="relative min-h-[85vh] flex items-center bg-gradient-to-br from-secondary via-background to-secondary overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-20 left-10 w-72 h-72 bg-primary rounded-full blur-3xl" />
@@ -117,7 +111,7 @@ const Index = () => {
 
         <div className="container-section relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="heading-1 text-foreground mb-6 animate-fade-in">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 animate-fade-in">
               <span className="text-white whitespace-nowrap">Association of Mechanical Engineers</span>,<br />
               IIT Tirupati
             </h1>
@@ -148,87 +142,69 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Upcoming Events Carousel Section */}
-      <section className="relative bg-secondary overflow-hidden">
-        <div className="relative h-[500px] md:h-[600px]">
-          {upcomingEvents.map((event, index) => (
-            <Link
-              key={event.id}
-              to={event.href}
-              className={`absolute inset-0 transition-opacity duration-700 ${
-                index === currentSlide ? "opacity-100 z-10" : "opacity-0 z-0"
-              }`}
-            >
-              {/* Background Image */}
-              <div className="absolute inset-0">
-                <img
-                  src={event.image}
-                  alt={event.title}
-                  className="w-full h-full object-cover"
-                />
-              </div>
+      {/* Upcoming Events - Card Layout */}
+      <section className="py-16 md:py-20 bg-muted/30">
+        <div className="container-section">
+          <h2 className="heading-2 text-foreground text-center mb-4">
+            Upcoming <span className="text-primary hover-text-zoom">Events</span>
+          </h2>
+          <p className="body-text text-center mb-10 max-w-2xl mx-auto">
+            Don't miss out on our latest workshops and events
+          </p>
 
-              {/* Text Overlay Box - Bottom Center */}
-              <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 w-full max-w-3xl px-4">
-                <div className="bg-black/65 backdrop-blur-sm rounded-xl px-8 py-6">
-                  <h2 className="text-2xl md:text-4xl font-bold text-white mb-2 line-clamp-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {upcomingEvents.map((event) => (
+              <Link
+                key={event.id}
+                to={event.href}
+                className="group bg-card border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+              >
+                {/* Image with Date Badge */}
+                <div className="relative aspect-[3/4] overflow-hidden">
+                  <img
+                    src={event.image}
+                    alt={event.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  {/* Date Badge */}
+                  <div className="absolute top-3 left-3 bg-primary text-primary-foreground px-3 py-1.5 rounded-md text-sm font-semibold shadow-lg">
+                    {event.date}
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="p-5">
+                  <h3 className="font-bold text-lg text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2">
                     {event.title}
-                  </h2>
-                  <div className="flex flex-wrap items-center gap-4 text-gray-200 text-sm md:text-base">
-                    <div className="flex items-center gap-2">
-                      <Calendar className="w-4 h-4 text-primary" />
-                      <span>{event.date}</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Clock className="w-4 h-4 text-primary" />
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-3 line-clamp-2">
+                    {event.description}
+                  </p>
+                  
+                  <div className="flex flex-wrap items-center gap-3 text-xs text-muted-foreground mb-3">
+                    <div className="flex items-center gap-1">
+                      <Clock className="w-3.5 h-3.5 text-primary" />
                       <span>{event.time}</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <MapPin className="w-4 h-4 text-primary" />
+                    <div className="flex items-center gap-1">
+                      <MapPin className="w-3.5 h-3.5 text-primary" />
                       <span>{event.venue}</span>
                     </div>
                   </div>
+
+                  <div className="flex items-center gap-1 text-primary text-sm font-medium">
+                    <span>View Details</span>
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </div>
                 </div>
-              </div>
-            </Link>
-          ))}
-
-          {/* Navigation Arrows */}
-          <button
-            onClick={(e) => { e.preventDefault(); prevSlide(); }}
-            className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white/20 transition-colors"
-            aria-label="Previous slide"
-          >
-            <ChevronLeft className="w-6 h-6" />
-          </button>
-          <button
-            onClick={(e) => { e.preventDefault(); nextSlide(); }}
-            className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white/20 transition-colors"
-            aria-label="Next slide"
-          >
-            <ChevronRight className="w-6 h-6" />
-          </button>
-
-          {/* Dot Indicators */}
-          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex gap-3">
-            {upcomingEvents.map((_, index) => (
-              <button
-                key={index}
-                onClick={(e) => { e.preventDefault(); setCurrentSlide(index); }}
-                className={`w-3 h-3 rounded-full transition-all ${
-                  index === currentSlide
-                    ? "bg-primary w-8"
-                    : "bg-white/50 hover:bg-white/80"
-                }`}
-                aria-label={`Go to slide ${index + 1}`}
-              />
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
       {/* Vision & Purpose Section */}
-      <section className="py-20 md:py-28 bg-background">
+      <section className="py-16 md:py-20 bg-background">
         <div className="container-section">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="heading-2 text-foreground mb-8">
@@ -267,7 +243,7 @@ const Index = () => {
       </section>
 
       {/* Faculty Members Section */}
-      <section className="py-20 md:py-28 bg-secondary">
+      <section className="py-16 md:py-20 bg-secondary">
         <div className="container-section">
           <h2 className="heading-2 text-foreground text-center mb-4">
             Our <span className="text-primary hover-text-zoom">Faculty</span>
@@ -281,7 +257,7 @@ const Index = () => {
             animationDelay: `${index * 0.1}s`
           }}>
                 {/* Avatar */}
-                <div className="w-32 h-32 rounded-full bg-secondary flex items-center justify-center mb-6 mx-auto overflow-hidden border-4 border-primary/20">
+                <div className="w-36 h-36 rounded-full bg-secondary flex items-center justify-center mb-6 mx-auto overflow-hidden border-4 border-primary/20">
                   {faculty.image ? <img src={faculty.image} alt={faculty.name} className="w-full h-full object-cover" /> : <User className="w-16 h-16 text-muted-foreground" />}
                 </div>
 
@@ -304,7 +280,7 @@ const Index = () => {
       </section>
 
       {/* Quick Links Section */}
-      <section className="py-20 md:py-28 bg-background">
+      <section className="py-16 md:py-20 bg-background">
         <div className="container-section">
           <h2 className="heading-2 text-foreground text-center mb-4">
             Explore <span className="text-primary hover-text-zoom">AME</span>

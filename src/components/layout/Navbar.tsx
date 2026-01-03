@@ -3,10 +3,24 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import ameLogo from "@/assets/ame-logo-new.jpeg";
-import iitLogo from "@/assets/iit-tirupati-logo.png";
+import iitLogo from "@/assets/iit-tirupati-logo-new.png";
 
 const navigationItems = [
   { name: "Home", href: "/" },
+  {
+    name: "Workshops",
+    href: "/workshops",
+    children: [
+      { name: "All Workshops", href: "/workshops" },
+      { name: "3D Printing", href: "/workshops/3d-printing" },
+      { name: "MATLAB – Hands-on Workshop", href: "/workshops/matlab" },
+      { name: "Python – Hands-on Workshop", href: "/workshops/python" },
+      { name: "LaTeX", href: "/workshops/latex" },
+      { name: "AutoCAD", href: "/workshops/autodesk" },
+      { name: "Fusion 360", href: "/workshops/autodesk" },
+      { name: "Abaqus", href: "/workshops/abaqus" },
+    ],
+  },
   {
     name: "Events",
     href: "/events",
@@ -17,18 +31,6 @@ const navigationItems = [
       { name: "Quizzes", href: "/events/quizzes" },
       { name: "Sports Tournaments", href: "/events/sports-tournaments" },
       { name: "Happy Hours", href: "/events/happy-hours" },
-    ],
-  },
-  {
-    name: "Workshops",
-    href: "/workshops",
-    children: [
-      { name: "All Workshops", href: "/workshops" },
-      { name: "3D Printing", href: "/workshops/3d-printing" },
-      { name: "Matlab – Hands-on Workshop", href: "/workshops/matlab" },
-      { name: "Python – Hands-on Workshop", href: "/workshops/python" },
-      { name: "Autodesk", href: "/workshops/autodesk" },
-      { name: "Abaqus", href: "/workshops/abaqus" },
     ],
   },
   {
@@ -65,13 +67,13 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
       <div className="container-section">
-        <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="flex items-center justify-between h-20 md:h-24">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
             <img
               src={ameLogo}
               alt="AME IIT Tirupati Logo"
-              className="w-14 h-14 md:w-16 md:h-16 rounded-lg object-contain flex-shrink-0"
+              className="w-16 h-16 md:w-20 md:h-20 rounded-lg object-contain flex-shrink-0"
             />
             <span className="text-xl md:text-2xl font-bold text-foreground">
               AME <span className="text-primary">IIT Tirupati</span>
@@ -126,7 +128,7 @@ const Navbar = () => {
               <img
                 src={iitLogo}
                 alt="IIT Tirupati"
-                className="h-12 w-auto object-contain"
+                className="h-14 w-auto object-contain"
               />
             </div>
           </div>
@@ -147,8 +149,8 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-16 bg-background border-b border-border animate-slide-in-right">
-          <div className="container-section py-4 max-h-[calc(100vh-4rem)] overflow-y-auto">
+        <div className="lg:hidden fixed inset-x-0 top-20 bg-background border-b border-border animate-slide-in-right">
+          <div className="container-section py-4 max-h-[calc(100vh-5rem)] overflow-y-auto">
             {navigationItems.map((item) => (
               <div key={item.name} className="py-2">
                 <Link
@@ -185,7 +187,7 @@ const Navbar = () => {
               <img
                 src={iitLogo}
                 alt="IIT Tirupati"
-                className="h-12 w-auto object-contain"
+                className="h-14 w-auto object-contain"
               />
             </div>
           </div>

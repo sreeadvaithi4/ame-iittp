@@ -1,14 +1,14 @@
 import Layout from "@/components/layout/Layout";
 import PageHeader from "@/components/shared/PageHeader";
 import { Calendar, Clock, MapPin, Users } from "lucide-react";
-import matlabWorkshopImage from "@/assets/events/matlab-workshop-new.png";
+import latexWorkshopImage from "@/assets/events/latex-workshop.png";
 
-const MatlabWorkshop = () => {
+const LatexWorkshop = () => {
   return (
     <Layout>
       <PageHeader
-        title="MATLAB & Simulink Workshop"
-        subtitle="Hands-on learning with industry-standard tools"
+        title="LaTeX Workshop"
+        subtitle="Professional document preparation for research and academia"
       />
 
       <section className="py-8 md:py-12 bg-background">
@@ -19,8 +19,8 @@ const MatlabWorkshop = () => {
               {/* Image */}
               <div className="relative h-[300px] md:h-[400px]">
                 <img 
-                  src={matlabWorkshopImage} 
-                  alt="MATLAB & Simulink Workshop" 
+                  src={latexWorkshopImage} 
+                  alt="LaTeX Workshop" 
                   className="w-full h-full object-contain bg-secondary/30"
                 />
               </div>
@@ -32,18 +32,17 @@ const MatlabWorkshop = () => {
                   <span className="text-sm font-medium">Upcoming Workshop</span>
                 </div>
                 <h3 className="text-2xl font-bold text-foreground mb-3">
-                  MATLAB & Simulink – Hands-on Workshop
+                  LaTeX – Hands-on Workshop
                 </h3>
                 <p className="text-muted-foreground mb-4 text-sm">
-                  Master computational analysis and simulation with industry-standard MATLAB tools. 
-                  Learn practical applications for mechanical engineering problems including 
-                  numerical methods, data visualization, and engineering simulations.
+                  Learn professional document preparation with LaTeX. Perfect for writing research papers, 
+                  thesis, reports, and technical documentation with beautiful typesetting.
                 </p>
                 
                 <div className="space-y-2">
                   <div className="flex items-center gap-3 text-foreground">
                     <Calendar className="w-4 h-4 text-primary" />
-                    <span className="text-sm">January 10th, 2025</span>
+                    <span className="text-sm">January 24th, 2025</span>
                   </div>
                   <div className="flex items-center gap-3 text-muted-foreground">
                     <Clock className="w-4 h-4 text-primary" />
@@ -74,4 +73,4 @@ const MatlabWorkshop = () => {
   );
 };
 
-export default MatlabWorkshop;
+export default LatexWorkshop;

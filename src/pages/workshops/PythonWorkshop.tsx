@@ -1,6 +1,7 @@
 import Layout from "@/components/layout/Layout";
 import PageHeader from "@/components/shared/PageHeader";
 import { Calendar, Clock, MapPin, Users } from "lucide-react";
+import pythonWorkshopImage from "@/assets/events/python-workshop.png";
 
 const PythonWorkshop = () => {
   return (
@@ -10,24 +11,22 @@ const PythonWorkshop = () => {
         subtitle="Hands-on learning with Python programming"
       />
 
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-8 md:py-12 bg-background">
         <div className="container-section">
-          {/* Featured Workshop */}
-          <div className="bg-card border border-border rounded-2xl overflow-hidden shadow-lg mb-12">
-            <div className="grid md:grid-cols-2 gap-0">
-              {/* Placeholder Image */}
-              <div className="relative h-64 md:h-auto min-h-[300px] bg-gradient-to-br from-primary/20 to-secondary flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="w-24 h-24 mx-auto mb-4 bg-primary/20 rounded-full flex items-center justify-center">
-                    <span className="text-4xl">🐍</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-foreground">Python Workshop</h3>
-                  <p className="text-muted-foreground">Coming Soon</p>
-                </div>
+          {/* Featured Workshop - Viewport Fit */}
+          <div className="bg-card border border-border rounded-2xl overflow-hidden shadow-lg">
+            <div className="grid md:grid-cols-2 gap-0 items-start">
+              {/* Image */}
+              <div className="relative h-[300px] md:h-[400px]">
+                <img 
+                  src={pythonWorkshopImage} 
+                  alt="Python Workshop" 
+                  className="w-full h-full object-contain bg-secondary/30"
+                />
               </div>
               
               {/* Content */}
-              <div className="p-8 flex flex-col justify-center">
+              <div className="p-6 flex flex-col justify-center">
                 <div className="flex items-center gap-2 text-primary mb-3">
                   <Calendar className="w-5 h-5" />
                   <span className="text-sm font-medium">Upcoming Workshop</span>
@@ -35,74 +34,38 @@ const PythonWorkshop = () => {
                 <h3 className="text-2xl font-bold text-foreground mb-3">
                   Python – Hands-on Workshop
                 </h3>
-                <p className="text-muted-foreground mb-6">
+                <p className="text-muted-foreground mb-4 text-sm">
                   Learn Python programming from scratch and apply it to solve engineering problems. 
                   This workshop covers Python fundamentals, data analysis with NumPy and Pandas, 
                   visualization with Matplotlib, and automation scripts for engineering tasks.
                 </p>
                 
-                <div className="space-y-3">
+                <div className="space-y-2">
                   <div className="flex items-center gap-3 text-foreground">
-                    <Calendar className="w-5 h-5 text-primary" />
-                    <span>To Be Announced</span>
+                    <Calendar className="w-4 h-4 text-primary" />
+                    <span className="text-sm">January 17th, 2025</span>
                   </div>
                   <div className="flex items-center gap-3 text-muted-foreground">
-                    <Clock className="w-5 h-5 text-primary" />
-                    <span>Duration: 2 Days</span>
+                    <Clock className="w-4 h-4 text-primary" />
+                    <span className="text-sm">9:30 AM - 12:30 PM</span>
                   </div>
                   <div className="flex items-center gap-3 text-muted-foreground">
-                    <MapPin className="w-5 h-5 text-primary" />
-                    <span>IIT Tirupati Campus</span>
+                    <MapPin className="w-4 h-4 text-primary" />
+                    <span className="text-sm">AB2 - CR104</span>
                   </div>
                   <div className="flex items-center gap-3 text-muted-foreground">
-                    <Users className="w-5 h-5 text-primary" />
-                    <span>Open to all ME students</span>
+                    <Users className="w-4 h-4 text-primary" />
+                    <span className="text-sm">Open to all students</span>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
 
-          {/* Workshop Details */}
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-secondary/50 border border-border rounded-xl p-6">
-              <h4 className="text-lg font-semibold text-foreground mb-4">What You'll Learn</h4>
-              <ul className="space-y-2 text-muted-foreground">
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-1">•</span>
-                  Python fundamentals and programming basics
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-1">•</span>
-                  Data analysis with NumPy and Pandas
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-1">•</span>
-                  Data visualization with Matplotlib
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-1">•</span>
-                  Automation scripts for engineering tasks
-                </li>
-              </ul>
-            </div>
-            
-            <div className="bg-secondary/50 border border-border rounded-xl p-6">
-              <h4 className="text-lg font-semibold text-foreground mb-4">Prerequisites</h4>
-              <ul className="space-y-2 text-muted-foreground">
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-1">•</span>
-                  No prior programming experience required
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-1">•</span>
-                  Basic understanding of mathematics
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-1">•</span>
-                  Laptop with Python installed (installation help provided)
-                </li>
-              </ul>
+                {/* Contact */}
+                <div className="mt-4 pt-4 border-t border-border">
+                  <p className="text-xs text-muted-foreground mb-2">Contact:</p>
+                  <p className="text-sm text-foreground">Kambala Kiran Kumar - 8008409633</p>
+                  <p className="text-sm text-foreground">Nandagovind J V - 7305056463</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
