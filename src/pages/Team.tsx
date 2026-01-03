@@ -113,29 +113,29 @@ const LinkedInIcon = () => (
 );
 
 const StudentCard = ({ student }: { student: StudentRep }) => (
-  <div className="group bg-card border border-border rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 text-center flex flex-col items-center h-full w-full">
-    <div className="w-32 h-32 rounded-full bg-primary/10 flex items-center justify-center mb-4 border-4 border-primary/30 group-hover:border-primary group-hover:bg-primary/20 transition-all duration-300 overflow-hidden">
+  <div className="group bg-muted/50 border border-border rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 text-center flex flex-col items-center h-full w-full hover:scale-[1.02] hover:border-primary/30">
+    <div className="w-28 h-28 md:w-32 md:h-32 rounded-full bg-primary/10 flex items-center justify-center mb-4 border-4 border-primary/30 group-hover:border-primary group-hover:bg-primary/20 transition-all duration-300 overflow-hidden">
       {student.image ? (
         <img src={student.image} alt={student.name} className="w-full h-full object-cover" />
       ) : (
-        <User className="w-16 h-16 text-primary" />
+        <User className="w-12 h-12 md:w-16 md:h-16 text-primary" />
       )}
     </div>
     <p className="text-sm font-medium text-primary uppercase tracking-wider mb-2">
       {student.role}
     </p>
-    <h3 className="font-bold text-lg text-foreground group-hover:text-primary transition-colors mb-4">
+    <h3 className="font-bold text-base md:text-lg text-foreground group-hover:text-primary transition-colors mb-4">
       {student.name}
     </h3>
     
-    {/* Social Links - Only LinkedIn and Email */}
+    {/* Social Links - Only LinkedIn and Email with improved visibility */}
     <div className="flex items-center gap-3 mt-auto">
       {student.linkedin && (
         <a
           href={student.linkedin}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+          className="w-10 h-10 rounded-full bg-primary/20 text-primary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110"
           title="LinkedIn"
         >
           <LinkedInIcon />
@@ -144,7 +144,7 @@ const StudentCard = ({ student }: { student: StudentRep }) => (
       {student.email && (
         <a
           href={`mailto:${student.email}`}
-          className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+          className="w-10 h-10 rounded-full bg-primary/20 text-primary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110"
           title="Email"
         >
           <Mail className="w-5 h-5" />
@@ -178,15 +178,15 @@ const Team = () => {
             Our dedicated faculty mentors who guide and support AME initiatives
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
             {facultyMembers.map((faculty, index) => (
               <div
                 key={faculty.name}
-                className="bg-card border border-border rounded-xl p-8 text-center animate-fade-in-up hover:border-primary/30 transition-colors"
+                className="bg-muted/50 border border-border rounded-xl p-6 md:p-8 text-center animate-fade-in-up hover:border-primary/30 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {/* Avatar */}
-                <div className="w-40 h-40 rounded-full bg-secondary flex items-center justify-center mb-6 mx-auto overflow-hidden border-4 border-primary/20">
+                <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-secondary flex items-center justify-center mb-4 md:mb-6 mx-auto overflow-hidden border-4 border-primary/20 transition-all duration-300 hover:border-primary">
                   {faculty.image ? (
                     <img
                       src={faculty.image}
@@ -194,26 +194,26 @@ const Team = () => {
                       className="w-full h-full object-cover"
                     />
                   ) : (
-                    <User className="w-20 h-20 text-muted-foreground" />
+                    <User className="w-16 h-16 md:w-20 md:h-20 text-muted-foreground" />
                   )}
                 </div>
 
                 {/* Info */}
-                <h3 className="text-xl font-bold text-foreground mb-2">
+                <h3 className="text-lg md:text-xl font-bold text-foreground mb-2">
                   {faculty.name}
                 </h3>
-                <p className="text-sm text-muted-foreground mb-5">
+                <p className="text-xs md:text-sm text-muted-foreground mb-5">
                   {faculty.designation}
                 </p>
 
-                {/* Icons - Only LinkedIn and Email */}
+                {/* Icons - Only LinkedIn and Email with improved visibility */}
                 <div className="flex items-center justify-center gap-3">
                   {faculty.linkedin && (
                     <a
                       href={faculty.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+                      className="w-10 h-10 rounded-full bg-primary/20 text-primary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110"
                       title="LinkedIn"
                     >
                       <LinkedInIcon />
@@ -221,7 +221,7 @@ const Team = () => {
                   )}
                   <a
                     href={`mailto:${faculty.email}`}
-                    className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+                    className="w-10 h-10 rounded-full bg-primary/20 text-primary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110"
                     title={`Email ${faculty.name}`}
                   >
                     <Mail className="w-5 h-5" />
@@ -244,21 +244,21 @@ const Team = () => {
           </p>
 
           {/* Row 1: President & Vice President */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6 max-w-2xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6 max-w-2xl mx-auto">
             {row1.map((student) => (
               <StudentCard key={student.name} student={student} />
             ))}
           </div>
 
           {/* Row 2: Secretaries */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6 max-w-2xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6 max-w-2xl mx-auto">
             {row2.map((student) => (
               <StudentCard key={student.name} student={student} />
             ))}
           </div>
 
           {/* Row 3: Coordinators - All 3 in one row */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {row3.map((student) => (
               <StudentCard key={student.name} student={student} />
             ))}

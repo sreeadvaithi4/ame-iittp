@@ -15,7 +15,6 @@ import NotFound from "./pages/NotFound";
 import MatlabWorkshop from "./pages/workshops/MatlabWorkshop";
 import PythonWorkshop from "./pages/workshops/PythonWorkshop";
 import LatexWorkshop from "./pages/workshops/LatexWorkshop";
-import ThreeDPrinting from "./pages/workshops/ThreeDPrinting";
 import Autodesk from "./pages/workshops/Autodesk";
 import Abaqus from "./pages/workshops/Abaqus";
 
@@ -53,7 +52,6 @@ const App = () => (
           <Route path="/workshops/matlab" element={<MatlabWorkshop />} />
           <Route path="/workshops/python" element={<PythonWorkshop />} />
           <Route path="/workshops/latex" element={<LatexWorkshop />} />
-          <Route path="/workshops/3d-printing" element={<ThreeDPrinting />} />
           <Route path="/workshops/autodesk" element={<Autodesk />} />
           <Route path="/workshops/abaqus" element={<Abaqus />} />
           

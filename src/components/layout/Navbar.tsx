@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import ameLogo from "@/assets/ame-logo-new.jpeg";
-import iitLogo from "@/assets/iit-tirupati-logo-new.png";
+import iitLogo from "@/assets/iit-tirupati-logo.svg";
 
 const navigationItems = [
   { name: "Home", href: "/" },
@@ -11,13 +11,10 @@ const navigationItems = [
     name: "Workshops",
     href: "/workshops",
     children: [
-      { name: "All Workshops", href: "/workshops" },
-      { name: "3D Printing", href: "/workshops/3d-printing" },
       { name: "MATLAB – Hands-on Workshop", href: "/workshops/matlab" },
       { name: "Python – Hands-on Workshop", href: "/workshops/python" },
       { name: "LaTeX", href: "/workshops/latex" },
-      { name: "AutoCAD", href: "/workshops/autodesk" },
-      { name: "Fusion 360", href: "/workshops/autodesk" },
+      { name: "AutoCAD and Fusion 360", href: "/workshops/autodesk" },
       { name: "Abaqus", href: "/workshops/abaqus" },
     ],
   },
@@ -69,19 +66,19 @@ const Navbar = () => {
       <div className="container-section">
         <div className="flex items-center justify-between h-20 md:h-24">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-3 group">
             <img
               src={ameLogo}
               alt="AME IIT Tirupati Logo"
-              className="w-16 h-16 md:w-20 md:h-20 rounded-lg object-contain flex-shrink-0"
+              className="w-20 h-20 md:w-24 md:h-24 rounded-lg object-contain flex-shrink-0 transition-transform duration-300 group-hover:scale-105"
             />
-            <span className="text-xl md:text-2xl font-bold text-foreground">
+            <span className="text-xl md:text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
               AME <span className="text-primary">IIT Tirupati</span>
             </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-1">
+          <div className="hidden lg:flex items-center gap-6">
             {navigationItems.map((item) => (
               <div
                 key={item.name}
@@ -92,7 +89,7 @@ const Navbar = () => {
                 <Link
                   to={item.href}
                   className={cn(
-                    "flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-medium transition-colors",
+                    "flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105",
                     isActive(item.href)
                       ? "text-primary bg-primary/10"
                       : "text-foreground hover:text-primary hover:bg-secondary"
@@ -112,7 +109,7 @@ const Navbar = () => {
                         <Link
                           key={child.name}
                           to={child.href}
-                          className="block px-4 py-3 text-sm text-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
+                          className="block px-4 py-3 text-sm text-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-200"
                         >
                           {child.name}
                         </Link>
@@ -128,7 +125,7 @@ const Navbar = () => {
               <img
                 src={iitLogo}
                 alt="IIT Tirupati"
-                className="h-14 w-auto object-contain"
+                className="h-16 w-auto object-contain transition-transform duration-300 hover:scale-105"
               />
             </div>
           </div>
