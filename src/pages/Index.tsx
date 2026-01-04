@@ -235,7 +235,7 @@ const Index = () => {
           <h2 className="heading-2 text-center mb-4 text-primary-foreground">
             Our <span className="hover-text-zoom text-primary-foreground">Faculty</span>
           </h2>
-          <p className="body-text text-center mb-12 max-w-2xl mx-auto text-secondary-foreground">
+          <p className="body-text text-center mb-12 max-w-2xl mx-auto text-popover">
             Meet our esteemed faculty members guiding AME initiatives
           </p>
 
