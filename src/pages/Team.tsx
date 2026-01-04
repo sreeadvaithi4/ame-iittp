@@ -113,18 +113,18 @@ const LinkedInIcon = () => (
 );
 
 const StudentCard = ({ student }: { student: StudentRep }) => (
-  <div className="group bg-muted/50 border border-border rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 text-center flex flex-col items-center h-full w-full hover:scale-[1.02] hover:border-primary/30">
-    <div className="w-28 h-28 md:w-32 md:h-32 rounded-full bg-primary/10 flex items-center justify-center mb-4 border-4 border-primary/30 group-hover:border-primary group-hover:bg-primary/20 transition-all duration-300 overflow-hidden">
+  <div className="group bg-white border border-border rounded-xl p-6 md:p-8 shadow-sm hover:shadow-lg transition-all duration-300 text-center flex flex-col items-center h-full w-full hover:scale-[1.02] hover:border-primary/30">
+    <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-primary/10 flex items-center justify-center mb-4 md:mb-6 border-4 border-primary/30 group-hover:border-primary group-hover:bg-primary/20 transition-all duration-300 overflow-hidden">
       {student.image ? (
         <img src={student.image} alt={student.name} className="w-full h-full object-cover" />
       ) : (
-        <User className="w-12 h-12 md:w-16 md:h-16 text-primary" />
+        <User className="w-16 h-16 md:w-20 md:h-20 text-primary" />
       )}
     </div>
-    <p className="text-sm font-medium text-primary uppercase tracking-wider mb-2">
+    <p className="text-sm md:text-base font-medium text-primary uppercase tracking-wider mb-2">
       {student.role}
     </p>
-    <h3 className="font-bold text-base md:text-lg text-foreground group-hover:text-primary transition-colors mb-4">
+    <h3 className="font-bold text-lg md:text-xl text-foreground group-hover:text-primary transition-colors mb-5">
       {student.name}
     </h3>
     
@@ -182,7 +182,7 @@ const Team = () => {
             {facultyMembers.map((faculty, index) => (
               <div
                 key={faculty.name}
-                className="bg-muted/50 border border-border rounded-xl p-6 md:p-8 text-center animate-fade-in-up hover:border-primary/30 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg"
+                className="bg-white border border-border rounded-xl p-6 md:p-8 text-center animate-fade-in-up hover:border-primary/30 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {/* Avatar */}

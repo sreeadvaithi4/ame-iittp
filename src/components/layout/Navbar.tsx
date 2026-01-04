@@ -7,17 +7,7 @@ import iitLogo from "@/assets/iit-tirupati-logo.svg";
 
 const navigationItems = [
   { name: "Home", href: "/" },
-  {
-    name: "Workshops",
-    href: "/workshops",
-    children: [
-      { name: "MATLAB – Hands-on Workshop", href: "/workshops/matlab" },
-      { name: "Python – Hands-on Workshop", href: "/workshops/python" },
-      { name: "LaTeX", href: "/workshops/latex" },
-      { name: "AutoCAD and Fusion 360", href: "/workshops/autodesk" },
-      { name: "Abaqus", href: "/workshops/abaqus" },
-    ],
-  },
+  { name: "Workshops", href: "/workshops" },
   {
     name: "Events",
     href: "/events",
