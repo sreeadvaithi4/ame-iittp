@@ -232,10 +232,10 @@ const Index = () => {
       {/* Faculty Members Section */}
       <section className="py-16 md:py-20 bg-secondary">
         <div className="container-section">
-          <h2 className="heading-2 text-foreground text-center mb-4">
-            Our <span className="text-primary hover-text-zoom">Faculty</span>
+          <h2 className="heading-2 text-center mb-4 text-primary-foreground">
+            Our <span className="hover-text-zoom text-primary-foreground">Faculty</span>
           </h2>
-          <p className="body-text text-center mb-12 max-w-2xl mx-auto">
+          <p className="body-text text-center mb-12 max-w-2xl mx-auto text-secondary-foreground">
             Meet our esteemed faculty members guiding AME initiatives
           </p>
 
