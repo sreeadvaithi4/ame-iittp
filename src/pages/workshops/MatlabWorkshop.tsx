@@ -2,30 +2,11 @@ import Layout from "@/components/layout/Layout";
 import PageHeader from "@/components/shared/PageHeader";
 import { Calendar, Clock, MapPin, Users, ExternalLink, BookOpen, CheckCircle } from "lucide-react";
 import matlabWorkshopImage from "@/assets/events/matlab-workshop-new.png";
-
-const whatYouWillLearn = [
-  "MATLAB basics and workspace navigation",
-  "Vectors, matrices, and array operations",
-  "2D and 3D plotting and visualization",
-  "Simulink fundamentals and block diagrams",
-  "Engineering problem-solving applications",
-  "Data analysis and numerical methods"
-];
-
-const prerequisites = [
-  "Basic understanding of mathematics",
-  "No prior programming experience required",
-  "Laptop with MATLAB installed (trial version works)",
-  "Enthusiasm to learn!"
-];
-
+const whatYouWillLearn = ["MATLAB basics and workspace navigation", "Vectors, matrices, and array operations", "2D and 3D plotting and visualization", "Simulink fundamentals and block diagrams", "Engineering problem-solving applications", "Data analysis and numerical methods"];
+const prerequisites = ["Basic understanding of mathematics", "No prior programming experience required", "Laptop with MATLAB installed (trial version works)", "Enthusiasm to learn!"];
 const MatlabWorkshop = () => {
-  return (
-    <Layout>
-      <PageHeader
-        title="MATLAB & Simulink Workshop"
-        subtitle="Hands-on learning with industry-standard tools"
-      />
+  return <Layout>
+      <PageHeader title="MATLAB & Simulink Workshop" subtitle="Hands-on learning with industry-standard tools" />
 
       <section className="py-8 md:py-12 bg-background">
         <div className="container-section">
@@ -34,11 +15,7 @@ const MatlabWorkshop = () => {
             <div className="grid md:grid-cols-2 gap-0 items-start">
               {/* Image */}
               <div className="relative h-[300px] md:h-[400px]">
-                <img 
-                  src={matlabWorkshopImage} 
-                  alt="MATLAB & Simulink Workshop" 
-                  className="w-full h-full object-contain bg-secondary/30"
-                />
+                <img src={matlabWorkshopImage} alt="MATLAB & Simulink Workshop" className="w-full h-full object-contain bg-secondary/30" />
               </div>
               
               {/* Content */}
@@ -48,7 +25,7 @@ const MatlabWorkshop = () => {
                   <span className="text-sm font-medium">Upcoming Workshop</span>
                 </div>
                 <h3 className="text-2xl font-bold text-foreground mb-3">
-                  MATLAB & Simulink – Hands-on Workshop
+                  MATLAB  – Hands-on Workshop
                 </h3>
                 <p className="text-muted-foreground mb-4 text-sm">
                   Master computational analysis and simulation with industry-standard MATLAB tools. 
@@ -77,12 +54,7 @@ const MatlabWorkshop = () => {
 
                 {/* Register Button */}
                 <div className="mt-6">
-                  <a
-                    href="https://forms.gle/R29UZbvqKEWpV59dA"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium hover:bg-primary/90 transition-all duration-300 hover:scale-105 hover:shadow-lg"
-                  >
+                  <a href="https://forms.gle/R29UZbvqKEWpV59dA" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium hover:bg-primary/90 transition-all duration-300 hover:scale-105 hover:shadow-lg">
                     Register Now
                     <ExternalLink className="w-4 h-4" />
                   </a>
@@ -107,12 +79,10 @@ const MatlabWorkshop = () => {
                 <h4 className="text-lg font-semibold">What You'll Learn</h4>
               </div>
               <ul className="space-y-3">
-                {whatYouWillLearn.map((item, index) => (
-                  <li key={index} className="flex items-start gap-2 text-sm text-muted-foreground">
+                {whatYouWillLearn.map((item, index) => <li key={index} className="flex items-start gap-2 text-sm text-muted-foreground">
                     <CheckCircle className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
                     <span>{item}</span>
-                  </li>
-                ))}
+                  </li>)}
               </ul>
             </div>
 
@@ -123,19 +93,15 @@ const MatlabWorkshop = () => {
                 <h4 className="text-lg font-semibold">Prerequisites</h4>
               </div>
               <ul className="space-y-3">
-                {prerequisites.map((item, index) => (
-                  <li key={index} className="flex items-start gap-2 text-sm text-muted-foreground">
+                {prerequisites.map((item, index) => <li key={index} className="flex items-start gap-2 text-sm text-muted-foreground">
                     <CheckCircle className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
                     <span>{item}</span>
-                  </li>
-                ))}
+                  </li>)}
               </ul>
             </div>
           </div>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default MatlabWorkshop;
