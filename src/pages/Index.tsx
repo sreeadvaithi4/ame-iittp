@@ -64,7 +64,7 @@ const quickLinks = [{
 }];
 const upcomingEvents = [{
   id: 1,
-  title: "MATLAB & Simulink Workshop",
+  title: "MATLAB Workshop",
   description: "Master computational analysis and simulation with industry-standard MATLAB tools.",
   date: "January 10th",
   time: "9:30 AM - 12:30 PM",
@@ -84,7 +84,7 @@ const upcomingEvents = [{
   registerLink: "https://forms.gle/842o8eFnQu8E23L6A"
 }, {
   id: 3,
-  title: "LaTeX Workshop",
+  title: "Latex Workshop",
   description: "Professional document preparation for research papers, thesis, and reports.",
   date: "January 24th",
   time: "9:30 AM - 12:30 PM",

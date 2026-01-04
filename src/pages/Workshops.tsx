@@ -6,7 +6,7 @@ import { Calculator, PenTool, Box, ArrowRight, Code, FileText } from "lucide-rea
 const workshopCategories = [
   {
     id: "matlab",
-    title: "MATLAB & Simulink",
+    title: "MATLAB",
     description: "Master computational analysis and simulation with MATLAB.",
     icon: <Calculator className="w-6 h-6" />,
     href: "/workshops/matlab"
@@ -20,7 +20,7 @@ const workshopCategories = [
   },
   {
     id: "latex",
-    title: "LaTeX",
+    title: "Latex",
     description: "Professional document preparation for research and academia.",
     icon: <FileText className="w-6 h-6" />,
     href: "/workshops/latex"
