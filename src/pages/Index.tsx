@@ -105,7 +105,7 @@ const Index = () => {
 
         <div className="container-section relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in text-secondary">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in text-primary">
               <span className="whitespace-nowrap text-5xl text-[#0d1112]">Association of Mechanical Engineers</span>,<br />
               IIT Tirupati
             </h1>
