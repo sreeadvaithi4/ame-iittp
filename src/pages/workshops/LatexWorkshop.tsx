@@ -4,7 +4,7 @@ import { Calendar, Clock, MapPin, Users, ExternalLink, BookOpen, CheckCircle } f
 import latexWorkshopImage from "@/assets/events/latex-workshop.png";
 
 const whatYouWillLearn = [
-  "LaTeX document structure and syntax",
+  "Latex document structure and syntax",
   "Formatting text, lists, and tables",
   "Mathematical equations and formulas",
   "Figures, captions, and cross-references",
@@ -13,9 +13,9 @@ const whatYouWillLearn = [
 ];
 
 const prerequisites = [
-  "No prior LaTeX experience required",
+  "No prior Latex experience required",
   "Basic computer literacy",
-  "Overleaf account (free online LaTeX editor)",
+  "Overleaf account (free online Latex editor)",
   "Interest in academic writing"
 ];
 
@@ -23,7 +23,7 @@ const LatexWorkshop = () => {
   return (
     <Layout>
       <PageHeader
-        title="LaTeX Workshop"
+        title="Latex Workshop"
         subtitle="Professional document preparation for research and academia"
       />
 
@@ -48,10 +48,10 @@ const LatexWorkshop = () => {
                   <span className="text-sm font-medium">Upcoming Workshop</span>
                 </div>
                 <h3 className="text-2xl font-bold text-foreground mb-3">
-                  LaTeX – Hands-on Workshop
+                  Latex – Hands-on Workshop
                 </h3>
                 <p className="text-muted-foreground mb-4 text-sm">
-                  Learn professional document preparation with LaTeX. Perfect for writing research papers, 
+                  Learn professional document preparation with Latex. Perfect for writing research papers, 
                   thesis, reports, and technical documentation with beautiful typesetting.
                 </p>
                 

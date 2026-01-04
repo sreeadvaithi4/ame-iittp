@@ -6,7 +6,7 @@ const whatYouWillLearn = ["MATLAB basics and workspace navigation", "Vectors, ma
 const prerequisites = ["Basic understanding of mathematics", "No prior programming experience required", "Laptop with MATLAB installed (trial version works)", "Enthusiasm to learn!"];
 const MatlabWorkshop = () => {
   return <Layout>
-      <PageHeader title="MATLAB & Simulink Workshop" subtitle="Hands-on learning with industry-standard tools" />
+      <PageHeader title="MATLAB Workshop" subtitle="Hands-on learning with industry-standard tools" />
 
       <section className="py-8 md:py-12 bg-background">
         <div className="container-section">

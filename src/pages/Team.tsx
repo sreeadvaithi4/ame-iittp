@@ -12,6 +12,7 @@ import kiranKumarImage from "@/assets/team/kiran-kumar.jpg";
 import dhanumjayImage from "@/assets/team/dhanumjay.webp";
 import prithiviImage from "@/assets/team/prithivi.png";
 import pranaveshImage from "@/assets/team/pranavesh.jpeg";
+import sreeAdvaithiImage from "@/assets/team/sree-advaithi.jpg";
 
 const facultyMembers = [
   {
@@ -76,6 +77,7 @@ const studentReps: StudentRep[] = [
   { 
     name: "Sree Advaithi", 
     role: "Secretary",
+    image: sreeAdvaithiImage,
     email: "me24b045@iittp.ac.in",
     row: 2
   },
