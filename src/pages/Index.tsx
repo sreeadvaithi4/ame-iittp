@@ -8,7 +8,6 @@ import mohdFurquanImage from "@/assets/faculty/mohd-furquan.png";
 import matlabWorkshopImage from "@/assets/events/matlab-workshop-new.png";
 import pythonWorkshopImage from "@/assets/events/python-workshop.png";
 import latexWorkshopImage from "@/assets/events/latex-workshop.png";
-
 const facultyMembers = [{
   name: "Dr. Govind Narayan Sahu",
   designation: "Faculty, Department of Mechanical Engineering",
@@ -25,7 +24,6 @@ const facultyMembers = [{
   email: "mfurquan@iittp.ac.in",
   image: mohdFurquanImage
 }];
-
 const highlights = [{
   icon: <Lightbulb className="w-6 h-6" />,
   title: "Technical Excellence",
@@ -43,7 +41,6 @@ const highlights = [{
   title: "Holistic Development",
   description: "Balanced growth beyond academics"
 }];
-
 const quickLinks = [{
   name: "Events",
   href: "/events",
@@ -65,43 +62,37 @@ const quickLinks = [{
   href: "/life-at-ame",
   icon: <Camera className="w-6 h-6" />
 }];
-
-const upcomingEvents = [
-  {
-    id: 1,
-    title: "MATLAB & Simulink Workshop",
-    description: "Master computational analysis and simulation with industry-standard MATLAB tools.",
-    date: "January 10th",
-    time: "9:30 AM - 12:30 PM",
-    venue: "AB2 - CR104",
-    image: matlabWorkshopImage,
-    href: "/workshops/matlab",
-    registerLink: "https://forms.gle/R29UZbvqKEWpV59dA"
-  },
-  {
-    id: 2,
-    title: "Python Workshop",
-    description: "Learn Python programming from scratch and apply it to solve engineering problems.",
-    date: "January 17th",
-    time: "9:30 AM - 12:30 PM",
-    venue: "AB2 - CR104",
-    image: pythonWorkshopImage,
-    href: "/workshops/python",
-    registerLink: "https://forms.gle/842o8eFnQu8E23L6A"
-  },
-  {
-    id: 3,
-    title: "LaTeX Workshop",
-    description: "Professional document preparation for research papers, thesis, and reports.",
-    date: "January 24th",
-    time: "9:30 AM - 12:30 PM",
-    venue: "AB2 - CR104",
-    image: latexWorkshopImage,
-    href: "/workshops/latex",
-    registerLink: "https://forms.gle/LaTeXWorkshop2025"
-  }
-];
-
+const upcomingEvents = [{
+  id: 1,
+  title: "MATLAB & Simulink Workshop",
+  description: "Master computational analysis and simulation with industry-standard MATLAB tools.",
+  date: "January 10th",
+  time: "9:30 AM - 12:30 PM",
+  venue: "AB2 - CR104",
+  image: matlabWorkshopImage,
+  href: "/workshops/matlab",
+  registerLink: "https://forms.gle/R29UZbvqKEWpV59dA"
+}, {
+  id: 2,
+  title: "Python Workshop",
+  description: "Learn Python programming from scratch and apply it to solve engineering problems.",
+  date: "January 17th",
+  time: "9:30 AM - 12:30 PM",
+  venue: "AB2 - CR104",
+  image: pythonWorkshopImage,
+  href: "/workshops/python",
+  registerLink: "https://forms.gle/842o8eFnQu8E23L6A"
+}, {
+  id: 3,
+  title: "LaTeX Workshop",
+  description: "Professional document preparation for research papers, thesis, and reports.",
+  date: "January 24th",
+  time: "9:30 AM - 12:30 PM",
+  venue: "AB2 - CR104",
+  image: latexWorkshopImage,
+  href: "/workshops/latex",
+  registerLink: "https://forms.gle/LaTeXWorkshop2025"
+}];
 const Index = () => {
   return <Layout>
       {/* Hero Section */}
@@ -114,8 +105,8 @@ const Index = () => {
 
         <div className="container-section relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 animate-fade-in">
-              <span className="text-white whitespace-nowrap">Association of Mechanical Engineers</span>,<br />
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in text-secondary">
+              <span className="whitespace-nowrap text-[#0c0d0d] text-6xl">Association of Mechanical Engineers</span>,<br />
               IIT Tirupati
             </h1>
             <p className="body-large mb-4 animate-fade-in" style={{
@@ -156,18 +147,10 @@ const Index = () => {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {upcomingEvents.map((event) => (
-              <div
-                key={event.id}
-                className="group bg-muted/50 border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]"
-              >
+            {upcomingEvents.map(event => <div key={event.id} className="group bg-muted/50 border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
                 {/* Image with Date Badge */}
                 <Link to={event.href} className="block relative aspect-[3/4] overflow-hidden">
-                  <img
-                    src={event.image}
-                    alt={event.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
+                  <img src={event.image} alt={event.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   {/* Date Badge */}
                   <div className="absolute top-3 left-3 bg-primary text-primary-foreground px-3 py-1.5 rounded-md text-sm font-semibold shadow-lg">
                     {event.date}
@@ -197,19 +180,12 @@ const Index = () => {
                   </div>
 
                   {/* Register Button */}
-                  <a
-                    href={event.registerLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium hover:bg-primary/90 transition-all duration-300 hover:scale-105 hover:shadow-md w-full justify-center"
-                    onClick={(e) => e.stopPropagation()}
-                  >
+                  <a href={event.registerLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium hover:bg-primary/90 transition-all duration-300 hover:scale-105 hover:shadow-md w-full justify-center" onClick={e => e.stopPropagation()}>
                     Register Now
                     <ExternalLink className="w-4 h-4" />
                   </a>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
