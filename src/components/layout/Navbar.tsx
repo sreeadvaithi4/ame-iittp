@@ -7,7 +7,13 @@ import iitLogo from "@/assets/iit-tirupati-logo.svg";
 
 const navigationItems = [
   { name: "Home", href: "/" },
-  { name: "Workshops", href: "/workshops" },
+  {
+    name: "Workshops",
+    href: "/workshops",
+    children: [
+      { name: "Guidance on Internship and Placement Preparation", href: "/workshops/internship-guidance" },
+    ],
+  },
   {
     name: "Events",
     href: "/events",
@@ -79,7 +85,7 @@ const Navbar = () => {
                 <Link
                   to={item.href}
                   className={cn(
-                    "flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105",
+                    "flex items-center gap-1 px-4 py-2 rounded-lg text-base font-medium transition-all duration-200 hover:scale-105",
                     isActive(item.href)
                       ? "text-primary bg-primary/10"
                       : "text-foreground hover:text-primary hover:bg-secondary"
