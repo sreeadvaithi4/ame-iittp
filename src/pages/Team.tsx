@@ -17,13 +17,13 @@ const facultyMembers = [{
   name: "Dr. Govind Narayan Sahu",
   designation: "Faculty, Department of Mechanical Engineering, IIT Tirupati",
   email: "govinds@iittp.ac.in",
-  linkedin: "https://www.linkedin.com/in/govind-sahu",
+  linkedin: "https://www.linkedin.com/in/govindsahu15",
   image: govindSahuImage
 }, {
   name: "Dr. Abir Dutta",
   designation: "Faculty, Department of Mechanical Engineering, IIT Tirupati",
   email: "abir.dutta@iittp.ac.in",
-  linkedin: "https://www.linkedin.com/in/abir-dutta",
+  linkedin: "https://www.linkedin.com/in/abir-d-a6a143154",
   image: abirDuttaImage
 }, {
   name: "Dr. Mohd Furquan",
@@ -47,14 +47,14 @@ const studentReps: StudentRep[] = [
   role: "President",
   image: kiranKumarImage,
   linkedin: "https://www.linkedin.com/in/kiran-kumar-kambala/",
-  email: "me22b013@iittp.ac.in",
+  email: "ME24M208@iittp.ac.in",
   row: 1
 }, {
   name: "Nandagovind J V",
   role: "Vice-President",
   image: nandagovindImage,
   linkedin: "https://www.linkedin.com/in/nandagovind-jv",
-  email: "me22b023@iittp.ac.in",
+  email: "me22b036@iittp.ac.in",
   row: 1
 },
 // Row 2: Secretaries
@@ -78,21 +78,21 @@ const studentReps: StudentRep[] = [
   role: "Coordinator",
   image: prithiviImage,
   linkedin: "https://www.linkedin.com/in/prithivi-nandakumar",
-  email: "me23b030@iittp.ac.in",
+  email: "me24m204@iittp.ac.in",
   row: 3
 }, {
   name: "Geddam Dhanumjay",
   role: "Coordinator",
   image: dhanumjayImage,
   linkedin: "https://www.linkedin.com/in/dhanumjayg",
-  email: "me23b011@iittp.ac.in",
+  email: "me22b022@iittp.ac.in",
   row: 3
 }, {
   name: "Dasari Pranavesh Reddy",
   role: "Coordinator",
   image: pranaveshImage,
   linkedin: "https://www.linkedin.com/in/pranavesh-reddy-944b5a255",
-  email: "me23b008@iittp.ac.in",
+  email: "me22b017@iittp.ac.in",
   row: 3
 }];
 const LinkedInIcon = () => <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
