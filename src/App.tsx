@@ -17,6 +17,7 @@ import PythonWorkshop from "./pages/workshops/PythonWorkshop";
 import LatexWorkshop from "./pages/workshops/LatexWorkshop";
 import Autodesk from "./pages/workshops/Autodesk";
 import Abaqus from "./pages/workshops/Abaqus";
+import InternshipGuidance from "./pages/workshops/InternshipGuidance";
 
 // Event pages
 import IndustrialVisits from "./pages/events/IndustrialVisits";
@@ -54,6 +55,7 @@ const App = () => (
           <Route path="/workshops/latex" element={<LatexWorkshop />} />
           <Route path="/workshops/autodesk" element={<Autodesk />} />
           <Route path="/workshops/abaqus" element={<Abaqus />} />
+          <Route path="/workshops/internship-guidance" element={<InternshipGuidance />} />
           
           {/* Event routes */}
           <Route path="/events/industrial-visits" element={<IndustrialVisits />} />

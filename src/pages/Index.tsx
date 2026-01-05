@@ -5,7 +5,8 @@ import { Lightbulb, Factory, Users, GraduationCap, ArrowRight, Calendar, Wrench,
 import abirDuttaImage from "@/assets/faculty/abir-dutta.png";
 import govindSahuImage from "@/assets/faculty/govind-sahu.jpg";
 import mohdFurquanImage from "@/assets/faculty/mohd-furquan.png";
-import matlabWorkshopImage from "@/assets/events/matlab-workshop-new.png";
+import matlabWorkshopImage from "@/assets/events/matlab-workshop.png";
+import heroBgImage from "@/assets/hero-bg.jpeg";
 import pythonWorkshopImage from "@/assets/events/python-workshop.png";
 import latexWorkshopImage from "@/assets/events/latex-workshop.png";
 const facultyMembers = [{
@@ -96,25 +97,29 @@ const upcomingEvents = [{
 const Index = () => {
   return <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center bg-gradient-to-br from-secondary via-background to-secondary overflow-hidden">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-primary rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-foreground rounded-full blur-3xl" />
+      <section className="relative min-h-[85vh] md:min-h-[85vh] flex items-center overflow-hidden">
+        {/* Background Image with Blur */}
+        <div className="absolute inset-0">
+          <img 
+            src={heroBgImage} 
+            alt="IIT Tirupati Campus" 
+            className="w-full h-full object-cover blur-[2px]"
+          />
+          <div className="absolute inset-0 bg-black/40" />
         </div>
 
-        <div className="container-section relative z-10">
+        <div className="container-section relative z-10 py-8 md:py-0">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in text-primary">
-              <span className="whitespace-nowrap text-5xl text-[#0d1112]">Association of Mechanical Engineers</span>,<br />
-              IIT Tirupati
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in text-white">
+              <span className="block sm:whitespace-nowrap">Association of Mechanical Engineers</span>
+              <span className="block mt-2">IIT Tirupati</span>
             </h1>
-            <p className="body-large mb-4 animate-fade-in" style={{
+            <p className="text-lg md:text-xl text-white/90 mb-4 animate-fade-in" style={{
             animationDelay: "0.1s"
           }}>
               Fostering growth, learning, and community for mechanical engineers
             </p>
-            <p className="text-muted-foreground mb-8 animate-fade-in" style={{
+            <p className="text-white/70 mb-8 animate-fade-in" style={{
             animationDelay: "0.2s"
           }}>
               Explore our events, workshops, and campus life

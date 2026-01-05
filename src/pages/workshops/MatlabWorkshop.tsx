@@ -1,7 +1,7 @@
 import Layout from "@/components/layout/Layout";
 import PageHeader from "@/components/shared/PageHeader";
 import { Calendar, Clock, MapPin, Users, ExternalLink, BookOpen, CheckCircle } from "lucide-react";
-import matlabWorkshopImage from "@/assets/events/matlab-workshop-new.png";
+import matlabWorkshopImage from "@/assets/events/matlab-workshop.png";
 const whatYouWillLearn = ["MATLAB basics and workspace navigation", "Vectors, matrices, and array operations", "2D and 3D plotting and visualization", "Engineering problem-solving applications", "Data analysis and numerical methods"];
 const prerequisites = ["Basic understanding of mathematics", "No prior programming experience required", "Laptop with MATLAB installed (trial version works)", "Enthusiasm to learn!"];
 const MatlabWorkshop = () => {
