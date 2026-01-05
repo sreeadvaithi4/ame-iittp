@@ -103,18 +103,14 @@ const Index = () => {
       <section className="relative min-h-[85vh] md:min-h-[85vh] flex items-center overflow-hidden">
         {/* Background Image with Blur */}
         <div className="absolute inset-0">
-          <img 
-            src={heroBgImage} 
-            alt="IIT Tirupati Campus" 
-            className="w-full h-full object-cover blur-[2px]"
-          />
+          <img src={heroBgImage} alt="IIT Tirupati Campus" className="w-full h-full object-cover blur-[2px]" />
           <div className="absolute inset-0 bg-black/40" />
         </div>
 
         <div className="container-section relative z-10 py-8 md:py-0">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in text-white">
-              <span className="block sm:whitespace-nowrap text-primary">Association of Mechanical Engineers</span>
+              <span className="block sm:whitespace-nowrap text-primary-foreground">Association of Mechanical Engineers</span>
               <span className="block mt-2 text-primary">IIT Tirupati</span>
             </h1>
             <p className="text-lg md:text-xl text-white/90 mb-4 animate-fade-in" style={{
