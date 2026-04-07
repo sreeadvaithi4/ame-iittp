@@ -7,6 +7,9 @@ import matlabCert2 from "@/assets/articles/matlab-cert-2.png";
 import matlabAudience1 from "@/assets/articles/matlab-audience-1.png";
 import matlabPresenter from "@/assets/articles/matlab-presenter.png";
 import matlabAudience2 from "@/assets/articles/matlab-audience-2.png";
+import pythonCert from "@/assets/articles/python-cert.png";
+import pythonAudience from "@/assets/articles/python-audience.png";
+import pythonGroup from "@/assets/articles/python-group.png";
 
 const posts = [
   {
