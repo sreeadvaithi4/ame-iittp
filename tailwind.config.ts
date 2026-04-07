@@ -182,15 +182,33 @@ export default {
   					transform: 'rotate(0deg)'
   				}
   			},
-  			'pulse-slow': {
-  				'0%, 100%': {
-  					opacity: '0.3'
-  				},
-  				'50%': {
-  					opacity: '0.8'
-  				}
-  			}
-  		},
+			'pulse-slow': {
+				'0%, 100%': {
+					opacity: '0.3'
+				},
+				'50%': {
+					opacity: '0.8'
+				}
+			},
+			'heart-pop': {
+				'0%': {
+					transform: 'scale(0)',
+					opacity: '0'
+				},
+				'30%': {
+					transform: 'scale(1.3)',
+					opacity: '1'
+				},
+				'50%': {
+					transform: 'scale(1)',
+					opacity: '1'
+				},
+				'100%': {
+					transform: 'scale(1)',
+					opacity: '0'
+				}
+			}
+		},
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
   			'accordion-up': 'accordion-up 0.2s ease-out',
@@ -200,7 +218,8 @@ export default {
   			'slide-in-right': 'slide-in-right 0.3s ease-out',
   			'spin-slow': 'spin-slow 60s linear infinite',
   			'spin-reverse': 'spin-reverse 80s linear infinite',
-  			'pulse-slow': 'pulse-slow 4s ease-in-out infinite'
+  			'pulse-slow': 'pulse-slow 4s ease-in-out infinite',
+  			'heart-pop': 'heart-pop 0.8s ease-out forwards'
   		},
   		boxShadow: {
   			'2xs': 'var(--shadow-2xs)',
