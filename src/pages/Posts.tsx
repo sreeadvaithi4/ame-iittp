@@ -24,6 +24,12 @@ const posts = [
     caption: "MATLAB Workshop - Hands-on Sessions & Certificate Distribution",
     date: "January 2026",
   },
+  {
+    id: 3,
+    images: [pythonCert, pythonAudience, pythonGroup],
+    caption: "Python Workshop - Hands-on Sessions & Certificate Distribution",
+    date: "2026",
+  },
 ];
 
 const Posts = () => {
