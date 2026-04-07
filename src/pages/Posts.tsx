@@ -7,6 +7,9 @@ import matlabCert2 from "@/assets/articles/matlab-cert-2.png";
 import matlabAudience1 from "@/assets/articles/matlab-audience-1.png";
 import matlabPresenter from "@/assets/articles/matlab-presenter.png";
 import matlabAudience2 from "@/assets/articles/matlab-audience-2.png";
+import pythonCert from "@/assets/articles/python-cert.png";
+import pythonAudience from "@/assets/articles/python-audience.png";
+import pythonGroup from "@/assets/articles/python-group.png";
 
 const posts = [
   {
@@ -20,6 +23,12 @@ const posts = [
     images: [matlabCert1, matlabCert2, matlabAudience1, matlabPresenter, matlabAudience2],
     caption: "MATLAB Workshop - Hands-on Sessions & Certificate Distribution",
     date: "January 2026",
+  },
+  {
+    id: 3,
+    images: [pythonCert, pythonAudience, pythonGroup],
+    caption: "Python Workshop - Hands-on Sessions & Certificate Distribution",
+    date: "2026",
   },
 ];
 
