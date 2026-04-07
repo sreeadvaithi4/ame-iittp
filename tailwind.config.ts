@@ -218,7 +218,8 @@ export default {
   			'slide-in-right': 'slide-in-right 0.3s ease-out',
   			'spin-slow': 'spin-slow 60s linear infinite',
   			'spin-reverse': 'spin-reverse 80s linear infinite',
-  			'pulse-slow': 'pulse-slow 4s ease-in-out infinite'
+  			'pulse-slow': 'pulse-slow 4s ease-in-out infinite',
+  			'heart-pop': 'heart-pop 0.8s ease-out forwards'
   		},
   		boxShadow: {
   			'2xs': 'var(--shadow-2xs)',
