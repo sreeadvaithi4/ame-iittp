@@ -122,6 +122,9 @@ const Team = () => {
   const row1 = studentReps.filter(s => s.row === 1);
   const row2 = studentReps.filter(s => s.row === 2);
   const row3 = studentReps.filter(s => s.row === 3);
+  const row4 = studentReps.filter(s => s.row === 4);
+  const row5 = studentReps.filter(s => s.row === 5);
+
   return <Layout>
       <PageHeader title="Our Team" subtitle="Faculty mentors and student representatives behind AME" />
 
