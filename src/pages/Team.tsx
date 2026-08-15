@@ -6,13 +6,8 @@ import { User, Mail } from "lucide-react";
 import abirDuttaImage from "@/assets/faculty/abir-dutta.png";
 import govindSahuImage from "@/assets/faculty/govind-sahu.jpg";
 import mohdFurquanImage from "@/assets/faculty/mohd-furquan.png";
-import pramodKumarImage from "@/assets/team/pramod-kumar.jpg";
-import nandagovindImage from "@/assets/team/nandagovind.jpg";
-import kiranKumarImage from "@/assets/team/kiran-kumar.jpg";
-import dhanumjayImage from "@/assets/team/dhanumjay.webp";
-import prithiviImage from "@/assets/team/prithivi.png";
-import pranaveshImage from "@/assets/team/pranavesh.jpeg";
 import sreeAdvaithiImage from "@/assets/team/sree-advaithi.jpg";
+
 const facultyMembers = [{
   name: "Dr. Govind Narayan Sahu",
   designation: "Faculty, Department of Mechanical Engineering, IIT Tirupati",
@@ -38,63 +33,62 @@ interface StudentRep {
   image?: string;
   linkedin?: string;
   email?: string;
-  row: 1 | 2 | 3;
+  row: 1 | 2 | 3 | 4 | 5;
 }
 const studentReps: StudentRep[] = [
 // Row 1: President & Vice President
 {
-  name: "K Kiran Kumar",
+  name: "S. L. Shabareesh",
   role: "President",
-  image: kiranKumarImage,
-  linkedin: "https://www.linkedin.com/in/kiran-kumar-kambala/",
-  email: "ME24M208@iittp.ac.in",
   row: 1
 }, {
-  name: "Nandagovind J V",
+  name: "Ch. Karthik Raj",
   role: "Vice-President",
-  image: nandagovindImage,
-  linkedin: "https://www.linkedin.com/in/nandagovind-jv",
-  email: "me22b036@iittp.ac.in",
   row: 1
 },
-// Row 2: Secretaries
+// Row 2: Secretaries 1 & 2
 {
-  name: "Pramod Kumar M",
+  name: "Vamsi Krishn",
   role: "Secretary",
-  image: pramodKumarImage,
-  linkedin: "https://www.linkedin.com/in/pramodkumar-m",
-  email: "me24m207@iittp.ac.in",
   row: 2
+}, {
+  name: "Lakshman Dath",
+  role: "Secretary",
+  row: 2
+},
+// Row 3: Secretaries 3 & 4
+{
+  name: "Gnana Chaitanya",
+  role: "Secretary",
+  row: 3
 }, {
   name: "Sree Advaithi",
   role: "Secretary",
   image: sreeAdvaithiImage,
   email: "me24b045@iittp.ac.in",
-  row: 2
+  row: 3
 },
-// Row 3: Coordinators
+// Row 4: Coordinators 1 & 2
 {
-  name: "Prithivi Nandakumar",
+  name: "Panja Hitha Tejasri",
   role: "Coordinator",
-  image: prithiviImage,
-  linkedin: "https://www.linkedin.com/in/prithivi-nandakumar",
-  email: "me24m204@iittp.ac.in",
-  row: 3
+  row: 4
 }, {
-  name: "Geddam Dhanumjay",
+  name: "Raviprolu Lakshmi Sai Harshitha",
   role: "Coordinator",
-  image: dhanumjayImage,
-  linkedin: "https://www.linkedin.com/in/dhanumjayg",
-  email: "me22b022@iittp.ac.in",
-  row: 3
+  row: 4
+},
+// Row 5: Coordinators 3 & 4
+{
+  name: "Navaneeth Kumar Chitra",
+  role: "Coordinator",
+  row: 5
 }, {
-  name: "Dasari Pranavesh Reddy",
+  name: "Duggirala Jnana Sai Srikar",
   role: "Coordinator",
-  image: pranaveshImage,
-  linkedin: "https://www.linkedin.com/in/pranavesh-reddy-944b5a255",
-  email: "me22b017@iittp.ac.in",
-  row: 3
+  row: 5
 }];
+
 const LinkedInIcon = () => <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
     <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
   </svg>;
@@ -128,6 +122,9 @@ const Team = () => {
   const row1 = studentReps.filter(s => s.row === 1);
   const row2 = studentReps.filter(s => s.row === 2);
   const row3 = studentReps.filter(s => s.row === 3);
+  const row4 = studentReps.filter(s => s.row === 4);
+  const row5 = studentReps.filter(s => s.row === 5);
+
   return <Layout>
       <PageHeader title="Our Team" subtitle="Faculty mentors and student representatives behind AME" />
 
@@ -192,10 +189,21 @@ const Team = () => {
             {row2.map(student => <StudentCard key={student.name} student={student} />)}
           </div>
 
-          {/* Row 3: Coordinators - All 3 in one row */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          {/* Row 3: Secretaries 3 & 4 */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6 max-w-2xl mx-auto">
             {row3.map(student => <StudentCard key={student.name} student={student} />)}
           </div>
+
+          {/* Row 4: Coordinators 1 & 2 */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6 max-w-2xl mx-auto">
+            {row4.map(student => <StudentCard key={student.name} student={student} />)}
+          </div>
+
+          {/* Row 5: Coordinators 3 & 4 */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
+            {row5.map(student => <StudentCard key={student.name} student={student} />)}
+          </div>
+
         </div>
       </section>
 
