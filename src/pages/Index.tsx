@@ -67,35 +67,16 @@ const quickLinks = [{
 }];
 const upcomingEvents = [{
   id: 1,
-  title: "MATLAB Workshop",
-  description: "Master computational analysis and simulation with industry-standard MATLAB tools.",
-  date: "January 10th",
-  time: "9:30 AM - 12:30 PM",
+  title: "Workshop on Python",
+  description: "The Association of Mechanical Engineers, IIT Tirupati presents a hands-on workshop on Python. Instructor: Arunagiri R E.",
+  date: "August 16th",
+  time: "3:00 PM - 6:00 PM",
   venue: "AB2 - CR104",
-  image: matlabWorkshopImage,
-  href: "/workshops/matlab",
-  registerLink: "https://forms.gle/R29UZbvqKEWpV59dA"
-}, {
-  id: 2,
-  title: "Python Workshop",
-  description: "Learn Python programming from scratch and apply it to solve engineering problems.",
-  date: "January 17th",
-  time: "9:30 AM - 12:30 PM",
-  venue: "AB2 - CR104",
-  image: pythonWorkshopImage,
+  image: pythonPoster.url,
   href: "/workshops/python",
   registerLink: "https://forms.gle/842o8eFnQu8E23L6A"
-}, {
-  id: 3,
-  title: "Latex Workshop",
-  description: "Professional document preparation for research papers, thesis, and reports.",
-  date: "January 24th",
-  time: "9:30 AM - 12:30 PM",
-  venue: "AB2 - CR104",
-  image: latexWorkshopImage,
-  href: "/workshops/latex",
-  registerLink: "https://forms.gle/LaTeXWorkshop2025"
 }];
+
 const Index = () => {
   return <Layout>
       {/* Hero Section */}
