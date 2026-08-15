@@ -189,10 +189,21 @@ const Team = () => {
             {row2.map(student => <StudentCard key={student.name} student={student} />)}
           </div>
 
-          {/* Row 3: Coordinators - All 3 in one row */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          {/* Row 3: Secretaries 3 & 4 */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6 max-w-2xl mx-auto">
             {row3.map(student => <StudentCard key={student.name} student={student} />)}
           </div>
+
+          {/* Row 4: Coordinators 1 & 2 */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6 max-w-2xl mx-auto">
+            {row4.map(student => <StudentCard key={student.name} student={student} />)}
+          </div>
+
+          {/* Row 5: Coordinators 3 & 4 */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
+            {row5.map(student => <StudentCard key={student.name} student={student} />)}
+          </div>
+
         </div>
       </section>
 
