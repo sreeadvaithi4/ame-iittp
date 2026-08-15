@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import PageHeader from "@/components/shared/PageHeader";
-import { Calculator, PenTool, Box, ArrowRight, Code, FileText } from "lucide-react";
+import { Calculator, PenTool, Box, ArrowRight, Code, FileText, GraduationCap } from "lucide-react";
 
 const workshopCategories = [
   {
@@ -38,8 +38,16 @@ const workshopCategories = [
     description: "Learn finite element analysis for engineering simulations.",
     icon: <Box className="w-6 h-6" />,
     href: "/workshops/abaqus"
+  },
+  {
+    id: "internship-guidance",
+    title: "Guidance on Internship and Placement Preparation",
+    description: "Sessions on preparing for internships and placements.",
+    icon: <GraduationCap className="w-6 h-6" />,
+    href: "/workshops/internship-guidance"
   }
 ];
+
 
 const Workshops = () => {
   return (
