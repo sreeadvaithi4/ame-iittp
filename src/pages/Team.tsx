@@ -6,13 +6,8 @@ import { User, Mail } from "lucide-react";
 import abirDuttaImage from "@/assets/faculty/abir-dutta.png";
 import govindSahuImage from "@/assets/faculty/govind-sahu.jpg";
 import mohdFurquanImage from "@/assets/faculty/mohd-furquan.png";
-import pramodKumarImage from "@/assets/team/pramod-kumar.jpg";
-import nandagovindImage from "@/assets/team/nandagovind.jpg";
-import kiranKumarImage from "@/assets/team/kiran-kumar.jpg";
-import dhanumjayImage from "@/assets/team/dhanumjay.webp";
-import prithiviImage from "@/assets/team/prithivi.png";
-import pranaveshImage from "@/assets/team/pranavesh.jpeg";
 import sreeAdvaithiImage from "@/assets/team/sree-advaithi.jpg";
+
 const facultyMembers = [{
   name: "Dr. Govind Narayan Sahu",
   designation: "Faculty, Department of Mechanical Engineering, IIT Tirupati",
