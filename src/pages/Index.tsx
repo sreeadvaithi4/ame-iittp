@@ -5,10 +5,9 @@ import { Lightbulb, Factory, Users, GraduationCap, ArrowRight, Calendar, Wrench,
 import abirDuttaImage from "@/assets/faculty/abir-dutta.png";
 import govindSahuImage from "@/assets/faculty/govind-sahu.jpg";
 import mohdFurquanImage from "@/assets/faculty/mohd-furquan.png";
-import matlabWorkshopImage from "@/assets/events/matlab-workshop.png";
 import heroBgImage from "@/assets/hero-bg.jpeg";
-import pythonWorkshopImage from "@/assets/events/python-workshop.png";
-import latexWorkshopImage from "@/assets/events/latex-workshop.png";
+import pythonPoster from "@/assets/events/python-workshop-2026.jpeg.asset.json";
+
 const facultyMembers = [{
   name: "Dr. Govind Narayan Sahu",
   designation: "Faculty, Department of Mechanical Engineering",
