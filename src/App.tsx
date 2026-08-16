@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Index from "./pages/Index";
 import Events from "./pages/Events";
 import Workshops from "./pages/Workshops";
@@ -44,7 +44,8 @@ const App = () => (
           <Route path="/workshops" element={<Workshops />} />
           <Route path="/team" element={<Team />} />
           <Route path="/life-at-ame" element={<LifeAtAME />} />
-          <Route path="/articles" element={<Posts />} />
+          <Route path="/about" element={<Posts />} />
+          <Route path="/articles" element={<Navigate to="/about" replace />} />
           
           {/* Workshop routes */}
           <Route path="/workshops/matlab" element={<MatlabWorkshop />} />

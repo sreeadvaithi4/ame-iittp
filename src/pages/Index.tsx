@@ -53,8 +53,8 @@ const quickLinks = [{
   href: "/workshops",
   icon: <Wrench className="w-6 h-6" />
 }, {
-  name: "Articles",
-  href: "/articles",
+  name: "About Us",
+  href: "/about",
   icon: <FileText className="w-6 h-6" />
 }, {
   name: "Team",
