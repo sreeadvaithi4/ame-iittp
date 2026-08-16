@@ -40,26 +40,35 @@ const studentReps: StudentRep[] = [
 {
   name: "S. L. Shabareesh",
   role: "President",
+  linkedin: "https://www.linkedin.com/in/shabareesh-s-l",
+  email: "me26d008@iittp.ac.in",
   row: 1
 }, {
   name: "Ch. Karthik Raj",
   role: "Vice-President",
+  email: "me23b011@iittp.ac.in",
   row: 1
 },
 // Row 2: Secretaries 1 & 2
 {
   name: "Vamsi Krishn",
   role: "Secretary",
+  linkedin: "https://www.linkedin.com/in/vamsi-krishna-veeravalli-3a02ba2b4",
+  email: "me23b052@iittp.ac.in",
   row: 2
 }, {
   name: "Lakshman Dath",
   role: "Secretary",
+  linkedin: "https://www.linkedin.com/in/lakshman-dath-1b876521a",
+  email: "me24d003@iittp.ac.in",
   row: 2
 },
 // Row 3: Secretaries 3 & 4
 {
   name: "Gnana Chaitanya",
   role: "Secretary",
+  linkedin: "https://www.linkedin.com/in/chaitanya-surisetty-576826250",
+  email: "me25m213@iittp.ac.in",
   row: 3
 }, {
   name: "Sree Advaithi",
@@ -72,20 +81,28 @@ const studentReps: StudentRep[] = [
 {
   name: "Panja Hitha Tejasri",
   role: "Coordinator",
+  linkedin: "https://www.linkedin.com/in/hitha-tejasri-panja-244a87415",
+  email: "me25b036@iittp.ac.in",
   row: 4
 }, {
   name: "Raviprolu Lakshmi Sai Harshitha",
   role: "Coordinator",
+  linkedin: "https://www.linkedin.com/in/lakshmi-sai-harshitha-raviprolu-96b448385",
+  email: "me25b041@iittp.ac.in",
   row: 4
 },
 // Row 5: Coordinators 3 & 4
 {
   name: "Navaneeth Kumar Chitra",
   role: "Coordinator",
+  linkedin: "https://www.linkedin.com/in/navaneeth-kumar-chitra-313189373",
+  email: "me25b011@iittp.ac.in",
   row: 5
 }, {
   name: "Duggirala Jnana Sai Srikar",
   role: "Coordinator",
+  linkedin: "https://www.linkedin.com/in/srikar-d-j-s",
+  email: "me25b013@iittp.ac.in",
   row: 5
 }];
 
