@@ -36,7 +36,7 @@ const Posts = () => {
   return (
     <Layout>
       <PageHeader
-        title="Articles"
+        title="About Us"
         subtitle="Stay updated with AME's latest announcements and event highlights"
       />
 

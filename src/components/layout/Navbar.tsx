@@ -38,7 +38,7 @@ const navigationItems = [
       { name: "Alumni Interactions", href: "/life-at-ame/alumni-interactions" },
     ],
   },
-  { name: "Articles", href: "/articles" },
+  { name: "About Us", href: "/about" },
 ];
 
 const Navbar = () => {

@@ -145,6 +145,18 @@ const Team = () => {
   return <Layout>
       <PageHeader title="Our Team" subtitle="Faculty mentors and student representatives behind AME" />
 
+      {/* 2026 Year Heading */}
+      <section className="pt-10 md:pt-14 pb-2 bg-background">
+        <div className="container-section text-center">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary tracking-tight animate-fade-in">
+            2026
+          </h2>
+          <p className="text-sm md:text-base text-muted-foreground mt-2 max-w-xl mx-auto">
+            Meet the AME team for the year 2026
+          </p>
+        </div>
+      </section>
+
       {/* Faculty Section */}
       <section className="py-12 md:py-16 bg-background">
         <div className="container-section">
