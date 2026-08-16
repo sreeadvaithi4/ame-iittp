@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import PageHeader from "@/components/shared/PageHeader";
-import { Calculator, PenTool, Box, ArrowRight, Code, FileText, GraduationCap } from "lucide-react";
+import { Calculator, ArrowRight, Code, GraduationCap } from "lucide-react";
 
 const workshopCategories = [
   {
@@ -17,27 +17,6 @@ const workshopCategories = [
     description: "Learn Python programming for engineering applications.",
     icon: <Code className="w-6 h-6" />,
     href: "/workshops/python"
-  },
-  {
-    id: "latex",
-    title: "Latex",
-    description: "Professional document preparation for research and academia.",
-    icon: <FileText className="w-6 h-6" />,
-    href: "/workshops/latex"
-  },
-  {
-    id: "autodesk",
-    title: "AutoCAD and Fusion 360",
-    description: "Develop CAD skills with industry-standard Autodesk tools.",
-    icon: <PenTool className="w-6 h-6" />,
-    href: "/workshops/autodesk"
-  },
-  {
-    id: "abaqus",
-    title: "Abaqus",
-    description: "Learn finite element analysis for engineering simulations.",
-    icon: <Box className="w-6 h-6" />,
-    href: "/workshops/abaqus"
   },
   {
     id: "internship-guidance",

@@ -14,9 +14,6 @@ import NotFound from "./pages/NotFound";
 // Workshop pages
 import MatlabWorkshop from "./pages/workshops/MatlabWorkshop";
 import PythonWorkshop from "./pages/workshops/PythonWorkshop";
-import LatexWorkshop from "./pages/workshops/LatexWorkshop";
-import Autodesk from "./pages/workshops/Autodesk";
-import Abaqus from "./pages/workshops/Abaqus";
 import InternshipGuidance from "./pages/workshops/InternshipGuidance";
 
 // Event pages
@@ -52,9 +49,6 @@ const App = () => (
           {/* Workshop routes */}
           <Route path="/workshops/matlab" element={<MatlabWorkshop />} />
           <Route path="/workshops/python" element={<PythonWorkshop />} />
-          <Route path="/workshops/latex" element={<LatexWorkshop />} />
-          <Route path="/workshops/autodesk" element={<Autodesk />} />
-          <Route path="/workshops/abaqus" element={<Abaqus />} />
           <Route path="/workshops/internship-guidance" element={<InternshipGuidance />} />
           
           {/* Event routes */}

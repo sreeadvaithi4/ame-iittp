@@ -7,13 +7,7 @@ import iitLogo from "@/assets/iit-tirupati-logo.svg";
 
 const navigationItems = [
   { name: "Home", href: "/" },
-  {
-    name: "Workshops",
-    href: "/workshops",
-    children: [
-      { name: "Guidance on Internship and Placement Preparation", href: "/workshops/internship-guidance" },
-    ],
-  },
+  { name: "Workshops", href: "/workshops" },
   {
     name: "Events",
     href: "/events",
