@@ -40,6 +40,25 @@ const Posts = () => {
         subtitle="Stay updated with AME's latest announcements and event highlights"
       />
 
+      {/* 2026 — Moments of the Year */}
+      <section className="pt-16 md:pt-24 pb-4 bg-background">
+        <div className="container-section text-center">
+          <h2 className="text-6xl md:text-8xl lg:text-9xl font-extrabold tracking-tight text-primary animate-fade-in">
+            2026
+          </h2>
+          <p
+            className="mt-3 text-base md:text-xl tracking-[0.25em] uppercase text-muted-foreground animate-fade-in-up"
+            style={{ animationDelay: "0.15s" }}
+          >
+            Moments of the Year
+          </p>
+          <div
+            className="mx-auto mt-6 h-px w-24 md:w-32 bg-primary/40 animate-fade-in"
+            style={{ animationDelay: "0.3s" }}
+          />
+        </div>
+      </section>
+
       <section className="py-16 md:py-24 bg-background">
         <div className="container-section">
           {posts.length > 0 ? (

@@ -12,9 +12,10 @@ import karthikRajAsset from "@/assets/team/karthik-raj.png.asset.json";
 import vamsiKrishnAsset from "@/assets/team/vamsi-krishn.png.asset.json";
 import lakshmanDathAsset from "@/assets/team/lakshman-dath.png.asset.json";
 import hithaTejasriAsset from "@/assets/team/hitha-tejasri.png.asset.json";
-import harshithaAsset from "@/assets/team/harshitha.png.asset.json";
 import navaneethAsset from "@/assets/team/navaneeth.png.asset.json";
 import srikarAsset from "@/assets/team/srikar.png.asset.json";
+import harshithaNewAsset from "@/assets/team/harshitha-new.png.asset.json";
+import gnanaChaitanyaAsset from "@/assets/team/gnana-chaitanya.png.asset.json";
 
 const facultyMembers = [{
   name: "Dr. Govind Narayan Sahu",
@@ -79,6 +80,7 @@ const studentReps: StudentRep[] = [
 {
   name: "Gnana Chaitanya",
   role: "Secretary",
+  image: gnanaChaitanyaAsset.url,
   linkedin: "https://www.linkedin.com/in/chaitanya-surisetty-576826250",
   email: "me25m213@iittp.ac.in",
   row: 3
@@ -99,7 +101,7 @@ const studentReps: StudentRep[] = [
   row: 4
 }, {
   name: "Raviprolu Lakshmi Sai Harshitha",
-  image: harshithaAsset.url,
+  image: harshithaNewAsset.url,
   role: "Coordinator",
   linkedin: "https://www.linkedin.com/in/lakshmi-sai-harshitha-raviprolu-96b448385",
   email: "me25b041@iittp.ac.in",
