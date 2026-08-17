@@ -149,10 +149,10 @@ const Team = () => {
       <section className="pt-10 md:pt-14 pb-2 bg-background">
         <div className="container-section text-center">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary tracking-tight animate-fade-in">
-            2026
+            2026-27
           </h2>
           <p className="text-sm md:text-base text-muted-foreground mt-2 max-w-xl mx-auto">
-            Meet the AME team for the year 2026
+            Meet the AME team for the academic year 2026-27
           </p>
         </div>
       </section>
