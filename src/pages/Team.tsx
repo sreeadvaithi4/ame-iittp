@@ -7,6 +7,14 @@ import abirDuttaImage from "@/assets/faculty/abir-dutta.png";
 import govindSahuImage from "@/assets/faculty/govind-sahu.jpg";
 import mohdFurquanImage from "@/assets/faculty/mohd-furquan.png";
 import sreeAdvaithiImage from "@/assets/team/sree-advaithi.jpg";
+import shabareeshAsset from "@/assets/team/shabareesh.jpg.asset.json";
+import karthikRajAsset from "@/assets/team/karthik-raj.png.asset.json";
+import vamsiKrishnAsset from "@/assets/team/vamsi-krishn.png.asset.json";
+import lakshmanDathAsset from "@/assets/team/lakshman-dath.png.asset.json";
+import hithaTejasriAsset from "@/assets/team/hitha-tejasri.png.asset.json";
+import harshithaAsset from "@/assets/team/harshitha.png.asset.json";
+import navaneethAsset from "@/assets/team/navaneeth.png.asset.json";
+import srikarAsset from "@/assets/team/srikar.png.asset.json";
 
 const facultyMembers = [{
   name: "Dr. Govind Narayan Sahu",
