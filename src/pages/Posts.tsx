@@ -10,6 +10,10 @@ import matlabAudience2 from "@/assets/articles/matlab-audience-2.png";
 import pythonCert from "@/assets/articles/python-cert.png";
 import pythonAudience from "@/assets/articles/python-audience.png";
 import pythonGroup from "@/assets/articles/python-group.png";
+import pythonPoster from "@/assets/events/python-workshop-2026.jpeg.asset.json";
+import pythonWsSpeaker from "@/assets/articles/python-ws-231958.png.asset.json";
+import pythonWsFelicitation from "@/assets/articles/python-ws-232010.png.asset.json";
+import pythonWsParticipants from "@/assets/articles/python-ws-231941.png.asset.json";
 
 const posts = [
   {
@@ -25,12 +29,28 @@ const posts = [
     date: "January 2026",
   },
   {
+    id: 4,
+    // Poster must stay first in this list
+    images: [
+      pythonPoster.url,
+      pythonWsSpeaker.url,
+      pythonWsFelicitation.url,
+      pythonWsParticipants.url,
+    ],
+    containFirst: true,
+    caption: "Python Workshop",
+    date: "16th August 2026",
+    description:
+      "A hands-on Python workshop organized by the Association of Mechanical Engineers (AME), IIT Tirupati, designed to introduce students to Python programming and its applications in engineering.",
+  },
+  {
     id: 3,
     images: [pythonCert, pythonAudience, pythonGroup],
     caption: "Python Workshop - Hands-on Sessions & Certificate Distribution",
     date: "2026",
   },
 ];
+
 
 const Posts = () => {
   return (
