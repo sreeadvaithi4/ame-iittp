@@ -190,9 +190,13 @@ const InstagramPost = ({ image, images, caption, date, description, containFirst
           </button>
           <span className="text-sm font-medium text-foreground">{likes} likes</span>
         </div>
-        <p className="font-medium text-foreground text-sm md:text-base line-clamp-2 mb-1">{caption}</p>
-        <p className="text-xs text-muted-foreground">{date}</p>
+        <p className="text-xs font-semibold uppercase tracking-wider text-primary mb-1">{date}</p>
+        <p className="font-medium text-foreground text-sm md:text-base mb-1">{caption}</p>
+        {description && (
+          <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{description}</p>
+        )}
       </div>
+
 
       {/* Share Menu Modal */}
       {showShareMenu && (
