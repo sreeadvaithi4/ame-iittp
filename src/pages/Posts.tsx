@@ -29,6 +29,12 @@ const posts = [
     date: "January 2026",
   },
   {
+    id: 3,
+    images: [pythonCert, pythonAudience, pythonGroup],
+    caption: "Python Workshop - Hands-on Sessions & Certificate Distribution",
+    date: "2026",
+  },
+  {
     id: 4,
     // Poster must stay first in this list
     images: [
@@ -42,12 +48,6 @@ const posts = [
     date: "16th August 2026",
     description:
       "A hands-on Python workshop organized by the Association of Mechanical Engineers (AME), IIT Tirupati, designed to introduce students to Python programming and its applications in engineering.",
-  },
-  {
-    id: 3,
-    images: [pythonCert, pythonAudience, pythonGroup],
-    caption: "Python Workshop - Hands-on Sessions & Certificate Distribution",
-    date: "2026",
   },
 ];
 
