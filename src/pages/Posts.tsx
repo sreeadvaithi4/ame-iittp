@@ -90,7 +90,10 @@ const Posts = () => {
                   images={'images' in post ? post.images : undefined}
                   caption={post.caption}
                   date={post.date}
+                  description={'description' in post ? post.description : undefined}
+                  containFirst={'containFirst' in post ? post.containFirst : undefined}
                 />
+
               ))}
             </div>
           ) : (
