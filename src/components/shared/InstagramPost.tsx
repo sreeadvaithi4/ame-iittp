@@ -105,7 +105,8 @@ const InstagramPost = ({ image, images, caption, date, description, containFirst
               src={img}
               alt={`${caption} - ${i + 1}`}
               className={cn(
-                "absolute inset-0 w-full h-full object-cover transition-opacity duration-300",
+                "absolute inset-0 w-full h-full transition-opacity duration-300",
+                containFirst && i === 0 ? "object-contain bg-secondary/30" : "object-cover",
                 i === currentIndex ? "opacity-100" : "opacity-0 pointer-events-none"
               )}
               draggable={false}
