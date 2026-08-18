@@ -62,7 +62,7 @@ const studentReps: StudentRep[] = [
 },
 // Row 2: Secretaries 1 & 2
 {
-  name: "Vamsi Krishn",
+  name: "Vamsi Krishna",
   image: vamsiKrishnAsset.url,
   role: "Secretary",
   linkedin: "https://www.linkedin.com/in/vamsi-krishna-veeravalli-3a02ba2b4",
