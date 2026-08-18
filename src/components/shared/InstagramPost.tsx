@@ -7,11 +7,15 @@ interface InstagramPostProps {
   images?: string[];
   caption: string;
   date: string;
+  description?: string;
+  /** Render the first image with object-contain (useful for posters) */
+  containFirst?: boolean;
   className?: string;
 }
 
-const InstagramPost = ({ image, images, caption, date, className }: InstagramPostProps) => {
+const InstagramPost = ({ image, images, caption, date, description, containFirst, className }: InstagramPostProps) => {
   const allImages = images && images.length > 0 ? images : image ? [image] : [];
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [liked, setLiked] = useState(false);
   const [likes, setLikes] = useState(24);
