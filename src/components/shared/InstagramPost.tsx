@@ -7,11 +7,15 @@ interface InstagramPostProps {
   images?: string[];
   caption: string;
   date: string;
+  description?: string;
+  /** Render the first image with object-contain (useful for posters) */
+  containFirst?: boolean;
   className?: string;
 }
 
-const InstagramPost = ({ image, images, caption, date, className }: InstagramPostProps) => {
+const InstagramPost = ({ image, images, caption, date, description, containFirst, className }: InstagramPostProps) => {
   const allImages = images && images.length > 0 ? images : image ? [image] : [];
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [liked, setLiked] = useState(false);
   const [likes, setLikes] = useState(24);
@@ -101,7 +105,8 @@ const InstagramPost = ({ image, images, caption, date, className }: InstagramPos
               src={img}
               alt={`${caption} - ${i + 1}`}
               className={cn(
-                "absolute inset-0 w-full h-full object-cover transition-opacity duration-300",
+                "absolute inset-0 w-full h-full transition-opacity duration-300",
+                containFirst && i === 0 ? "object-contain bg-secondary/30" : "object-cover",
                 i === currentIndex ? "opacity-100" : "opacity-0 pointer-events-none"
               )}
               draggable={false}
@@ -185,9 +190,13 @@ const InstagramPost = ({ image, images, caption, date, className }: InstagramPos
           </button>
           <span className="text-sm font-medium text-foreground">{likes} likes</span>
         </div>
-        <p className="font-medium text-foreground text-sm md:text-base line-clamp-2 mb-1">{caption}</p>
-        <p className="text-xs text-muted-foreground">{date}</p>
+        <p className="text-xs font-semibold uppercase tracking-wider text-primary mb-1">{date}</p>
+        <p className="font-medium text-foreground text-sm md:text-base mb-1">{caption}</p>
+        {description && (
+          <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{description}</p>
+        )}
       </div>
+
 
       {/* Share Menu Modal */}
       {showShareMenu && (
