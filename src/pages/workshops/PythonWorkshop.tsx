@@ -1,7 +1,7 @@
 import Layout from "@/components/layout/Layout";
 import PageHeader from "@/components/shared/PageHeader";
 import { Calendar, Clock, MapPin, User, ExternalLink } from "lucide-react";
-import pythonPoster from "@/assets/events/python-workshop-2026.jpeg.asset.json";
+import pythonPoster from "@/assets/events/python-workshop-2026.jpeg";
 
 const REGISTRATION_LINK = "https://forms.gle/842o8eFnQu8E23L6A";
 
@@ -20,7 +20,7 @@ const PythonWorkshop = () => {
               {/* Poster */}
               <div className="relative h-[360px] md:h-[520px]">
                 <img
-                  src={pythonPoster.url}
+                  src={pythonPoster}
                   alt="Workshop on Python – August 16th 2026, AB2 - CR104"
                   className="w-full h-full object-contain bg-secondary/30"
                 />
