@@ -6,7 +6,7 @@ import abirDuttaImage from "@/assets/faculty/abir-dutta.png";
 import govindSahuImage from "@/assets/faculty/govind-sahu.jpg";
 import mohdFurquanImage from "@/assets/faculty/mohd-furquan.png";
 import heroBgImage from "@/assets/hero-bg.jpeg";
-import pythonPoster from "@/assets/events/python-workshop-2026.jpeg.asset.json";
+import pythonPoster from "@/assets/events/python-workshop-2026.jpeg";
 
 const facultyMembers = [{
   name: "Dr. Govind Narayan Sahu",
@@ -72,7 +72,7 @@ const upcomingEvents = [{
   date: "August 16th",
   time: "3:00 PM - 6:00 PM",
   venue: "AB2 - CR104",
-  image: pythonPoster.url,
+  image: pythonPoster,
   href: "/workshops/python",
   registerLink: "https://forms.gle/842o8eFnQu8E23L6A"
 }];

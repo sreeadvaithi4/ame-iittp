@@ -10,10 +10,10 @@ import matlabAudience2 from "@/assets/articles/matlab-audience-2.png";
 import pythonCert from "@/assets/articles/python-cert.png";
 import pythonAudience from "@/assets/articles/python-audience.png";
 import pythonGroup from "@/assets/articles/python-group.png";
-import pythonPoster from "@/assets/events/python-workshop-2026.jpeg.asset.json";
-import pythonWsSpeaker from "@/assets/articles/python-ws-231958.png.asset.json";
-import pythonWsFelicitation from "@/assets/articles/python-ws-232010.png.asset.json";
-import pythonWsParticipants from "@/assets/articles/python-ws-231941.png.asset.json";
+import pythonPoster from "@/assets/events/python-workshop-2026.jpeg";
+import pythonWsSpeaker from "@/assets/articles/python-ws-231958.png";
+import pythonWsFelicitation from "@/assets/articles/python-ws-232010.png";
+import pythonWsParticipants from "@/assets/articles/python-ws-231941.png";
 
 const posts = [
   {
@@ -38,10 +38,10 @@ const posts = [
     id: 4,
     // Poster must stay first in this list
     images: [
-      pythonPoster.url,
-      pythonWsSpeaker.url,
-      pythonWsFelicitation.url,
-      pythonWsParticipants.url,
+      pythonPoster,
+      pythonWsSpeaker,
+      pythonWsFelicitation,
+      pythonWsParticipants,
     ],
     containFirst: true,
     caption: "Python Workshop",

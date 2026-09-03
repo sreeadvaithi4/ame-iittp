@@ -7,15 +7,15 @@ import abirDuttaImage from "@/assets/faculty/abir-dutta.png";
 import govindSahuImage from "@/assets/faculty/govind-sahu.jpg";
 import mohdFurquanImage from "@/assets/faculty/mohd-furquan.png";
 import sreeAdvaithiImage from "@/assets/team/sree-advaithi.jpg";
-import shabareeshAsset from "@/assets/team/shabareesh.jpg.asset.json";
-import karthikRajAsset from "@/assets/team/karthik-raj.png.asset.json";
-import vamsiKrishnAsset from "@/assets/team/vamsi-krishn.png.asset.json";
-import lakshmanDathAsset from "@/assets/team/lakshman-dath.png.asset.json";
-import hithaTejasriAsset from "@/assets/team/hitha-tejasri.png.asset.json";
-import navaneethAsset from "@/assets/team/navaneeth.png.asset.json";
-import srikarAsset from "@/assets/team/srikar.png.asset.json";
-import harshithaNewAsset from "@/assets/team/harshitha-new.png.asset.json";
-import gnanaChaitanyaAsset from "@/assets/team/gnana-chaitanya.png.asset.json";
+import shabareeshImage from "@/assets/team/shabareesh.jpg";
+import karthikRajImage from "@/assets/team/karthik-raj.png";
+import vamsiKrishnImage from "@/assets/team/vamsi-krishn.png";
+import lakshmanDathImage from "@/assets/team/lakshman-dath.png";
+import hithaTejasriImage from "@/assets/team/hitha-tejasri.png";
+import navaneethImage from "@/assets/team/navaneeth.png";
+import srikarImage from "@/assets/team/srikar.png";
+import harshithaNewImage from "@/assets/team/harshitha-new.png";
+import gnanaChaitanyaImage from "@/assets/team/gnana-chaitanya.png";
 
 const facultyMembers = [{
   name: "Dr. Govind Narayan Sahu",
@@ -48,14 +48,14 @@ const studentReps: StudentRep[] = [
 // Row 1: President & Vice President
 {
   name: "S. L. Shabareesh",
-  image: shabareeshAsset.url,
+  image: shabareeshImage,
   role: "President",
   linkedin: "https://www.linkedin.com/in/shabareesh-s-l",
   email: "me26d008@iittp.ac.in",
   row: 1
 }, {
   name: "Ch. Karthik Raj",
-  image: karthikRajAsset.url,
+  image: karthikRajImage,
   role: "Vice-President",
   email: "me23b011@iittp.ac.in",
   row: 1
@@ -63,14 +63,14 @@ const studentReps: StudentRep[] = [
 // Row 2: Secretaries 1 & 2
 {
   name: "Vamsi Krishna",
-  image: vamsiKrishnAsset.url,
+  image: vamsiKrishnImage,
   role: "Secretary",
   linkedin: "https://www.linkedin.com/in/vamsi-krishna-veeravalli-3a02ba2b4",
   email: "me23b052@iittp.ac.in",
   row: 2
 }, {
   name: "Lakshman Dath",
-  image: lakshmanDathAsset.url,
+  image: lakshmanDathImage,
   role: "Secretary",
   linkedin: "https://www.linkedin.com/in/lakshman-dath-1b876521a",
   email: "me24d003@iittp.ac.in",
@@ -80,7 +80,7 @@ const studentReps: StudentRep[] = [
 {
   name: "Gnana Chaitanya",
   role: "Secretary",
-  image: gnanaChaitanyaAsset.url,
+  image: gnanaChaitanyaImage,
   linkedin: "https://www.linkedin.com/in/chaitanya-surisetty-576826250",
   email: "me25m213@iittp.ac.in",
   row: 3
@@ -94,14 +94,14 @@ const studentReps: StudentRep[] = [
 // Row 4: Coordinators 1 & 2
 {
   name: "Panja Hitha Tejasri",
-  image: hithaTejasriAsset.url,
+  image: hithaTejasriImage,
   role: "Coordinator",
   linkedin: "https://www.linkedin.com/in/hitha-tejasri-panja-244a87415",
   email: "me25b036@iittp.ac.in",
   row: 4
 }, {
   name: "Raviprolu Lakshmi Sai Harshitha",
-  image: harshithaNewAsset.url,
+  image: harshithaNewImage,
   role: "Coordinator",
   linkedin: "https://www.linkedin.com/in/lakshmi-sai-harshitha-raviprolu-96b448385",
   email: "me25b041@iittp.ac.in",
@@ -110,14 +110,14 @@ const studentReps: StudentRep[] = [
 // Row 5: Coordinators 3 & 4
 {
   name: "Navaneeth Kumar Chitra",
-  image: navaneethAsset.url,
+  image: navaneethImage,
   role: "Coordinator",
   linkedin: "https://www.linkedin.com/in/navaneeth-kumar-chitra-313189373",
   email: "me25b011@iittp.ac.in",
   row: 5
 }, {
   name: "Duggirala Jnana Sai Srikar",
-  image: srikarAsset.url,
+  image: srikarImage,
   role: "Coordinator",
   linkedin: "https://www.linkedin.com/in/srikar-d-j-s",
   email: "me25b013@iittp.ac.in",
