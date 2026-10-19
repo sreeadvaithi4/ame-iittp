@@ -22,7 +22,6 @@ import IndustrialLectures from "./pages/events/IndustrialLectures";
 import Competitions from "./pages/events/Competitions";
 import Quizzes from "./pages/events/Quizzes";
 import SportsTournaments from "./pages/events/SportsTournaments";
-import HappyHours from "./pages/events/HappyHours";
 
 // Life at AME pages
 import FacultyInteractions from "./pages/life-at-ame/FacultyInteractions";
@@ -58,7 +57,7 @@ const App = () => (
           <Route path="/events/competitions" element={<Competitions />} />
           <Route path="/events/quizzes" element={<Quizzes />} />
           <Route path="/events/sports-tournaments" element={<SportsTournaments />} />
-          <Route path="/events/happy-hours" element={<HappyHours />} />
+          <Route path="/events/happy-hours" element={<Navigate to="/events" replace />} />
           
           {/* Life at AME routes */}
           <Route path="/life-at-ame/faculty-interactions" element={<FacultyInteractions />} />
