@@ -17,7 +17,7 @@ const navigationItems = [
       { name: "Competitions", href: "/events/competitions" },
       { name: "Quizzes", href: "/events/quizzes" },
       { name: "Sports Tournaments", href: "/events/sports-tournaments" },
-      { name: "Happy Hours", href: "/events/happy-hours" },
+      { name: "Student Chapters", href: "/events#student-chapters" },
     ],
   },
   {
